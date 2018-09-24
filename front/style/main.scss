@@ -1,0 +1,16 @@
+@import "const.scss";
+@import "header.scss";
+@import "top-menu.scss";
+@import "content.scss";
+@import "footer.scss";
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  height: 100%;
+  background-color: #fff;
+  margin: 0 auto;
+} 

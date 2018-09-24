@@ -1,0 +1,21 @@
+.header {
+  width: 100%;
+  height: 140px;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+    &__user{
+        background-color: $bg-header1;
+        height: $hh-header1;
+        .container{
+            background-color: $bg-header1;
+        }
+    }
+    &__menu{
+        background-color: $bg-header2;
+        height: $hh-header2;
+        .container{
+            background-color: $bg-header2;
+        }
+    }
+}

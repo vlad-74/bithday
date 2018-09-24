@@ -1,0 +1,65 @@
+.header {
+  width: 100%;
+  height: 140px;
+  position: fixed;
+  top: 0;
+  z-index: 9999; }
+  .header__user {
+    background-color: #000;
+    height: 40px; }
+    .header__user .container {
+      background-color: #000; }
+  .header__menu {
+    background-color: #FE252D;
+    height: 100px; }
+    .header__menu .container {
+      background-color: #FE252D; }
+
+.contetnt-1 {
+  background-color: #FE1B17;
+  width: 100%;
+  height: 690px; }
+  .contetnt-1 .container {
+    background-color: #FE1B17; }
+
+.contetnt-2 {
+  background-color: #FFBF34;
+  width: 100%;
+  height: 1600px; }
+  .contetnt-2 .container {
+    background-color: #FFBF34; }
+
+.contetnt-3 {
+  width: 100%;
+  height: 950px; }
+  .contetnt-3 .container {
+    background-color: #FFFFFF; }
+
+.contetnt-4 {
+  background-color: #FFBF34;
+  width: 100%;
+  height: 800px; }
+  .contetnt-4 .container {
+    background-color: #FFBF34; }
+
+.contetnt-5 {
+  width: 100%;
+  height: 370px; }
+  .contetnt-5 .container {
+    background-color: #FFFFFF; }
+
+.footer {
+  background-color: #444444;
+  width: 100%;
+  height: 640px; }
+  .footer .container {
+    background-color: #444444; }
+
+* {
+  box-sizing: border-box; }
+
+.container {
+  max-width: 1200px;
+  height: 100%;
+  background-color: #fff;
+  margin: 0 auto; }
