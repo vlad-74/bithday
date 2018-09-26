@@ -2,6 +2,20 @@ import * as data from "./data";
 import "../style/main.scss";
 import _ from 'lodash';
 
+var txt = 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' +
+    'Alias nesciunt aliquam sint aliquid enim quisquam amet, minus ea sed neque perferendis corrupti'
+    + 'rspiciatis, doloribus earum incidunt sunt rem vero ducimus fuga quaerat necessitatibus'
+    + 'similique facere veritatis excepturi ? Earum odit autem ipsa quos.Architecto voluptatum quia'
+    + 'doloremque autem aperiam, modi sed odit! Nobis et voluptate architecto, laudantium quisquam'
+;
+
+
+var comments = [
+    { id: 1, fio: 'Иванов Иван Иванович', txt: '111 ' },
+    { id: 2, fio: 'Петров Петр Петрович', txt: '222 ' + txt }
+];
+
+
 function randomIntFromInterval(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
@@ -69,6 +83,8 @@ function validForm() {
 
 document.addEventListener("DOMContentLoaded", function() {//Аналог $(document).ready(function(){
 
+    viewComments();
+
     document.getElementById("name1").addEventListener('keydown', function (ev) {
         cleanError();
     });
@@ -101,5 +117,52 @@ document.addEventListener("DOMContentLoaded", function() {//Аналог $(docum
         rot(720 + getRandom * 36);
     });
 
+    function viewComments() {
+        for (var i = 0; i < comments.length; i++) {
+            const element = comments[i];
+            addPost(element);
+        }
+    }
 
+    function addPost(element) {
+        var m = document.createElement('div');
+        m.className = "comment";
+        // m.innerHTML = "\n\t\t<div class='photo'>\n\t\t\t<img onclick=\"fullFoto(event)\" alt=\"\" src=" + (element.img || "") + " >\n        </div>\n\t\t<div class='post-body'>\n\t\t\t<div class=\"full-name\">\n\t\t\t\t<h2>" + (element.fio || "") + " </h2>\n\t\t\t</div>\n\t\t\t<div id = \"" + element.id + "\" class='post-text'>\n\t\t\t" + (element.txt || "") + " \n\t\t\t</div>\n\t\t\t<div class='post-btn'>\n\t\t\t\t<button class=\"btn btn-read\" onclick=\"changeText(event, " + element.id + ")\"></button>\n\t\t\t</div>\n        </div>\n        ";
+        
+        m.innerHTML = `
+        <div class="comment__heder">
+            <div class="comment-name">
+                елена Петровна
+                                </div>
+            <div class="comment-data">
+                1 октября
+            </div>
+        </div>
+        <div class="comment__comment">
+            +++ Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde quaerat nemo, nesciunt numquam impedit sint maxime
+            cumque recusandae quo repellat, quia rem nulla. Nobis, quaerat. Quidem rem molestias sapiente minima expedita cumque
+            voluptatem aut, unde architecto voluptas, ad porro. Amet sequi dicta fugit reiciendis temporibus repellendus incidunt
+            quas sit labore.
+        </div>
+        `;
+        document.getElementById("comments").appendChild(m);
+    }
 });
+
+
+{/* <div class="comment">
+    <div class="comment__heder">
+        <div class="comment-name">
+            елена Петровна
+                            </div>
+        <div class="comment-data">
+            1 октября
+                            </div>
+    </div>
+    <div class="comment__comment">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde quaerat nemo, nesciunt numquam impedit sint maxime
+        cumque recusandae quo repellat, quia rem nulla. Nobis, quaerat. Quidem rem molestias sapiente minima expedita cumque
+        voluptatem aut, unde architecto voluptas, ad porro. Amet sequi dicta fugit reiciendis temporibus repellendus incidunt
+        quas sit labore.
+    </div>
+</div> */}
