@@ -11,8 +11,8 @@ var txt = 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' +
 
 
 var comments = [
-    { id: 1, fio: 'Иванов Иван Иванович', txt: '111 ' },
-    { id: 2, fio: 'Петров Петр Петрович', txt: '222 ' + txt }
+    { id: 1, fio: 'Иванов Иван Иванович', txt: '111 ', dt: '1 октября' },
+    { id: 2, fio: 'Петров Петр Петрович', txt: '222 ' + txt, dt: '1 октября' }
 ];
 
 
@@ -132,17 +132,14 @@ document.addEventListener("DOMContentLoaded", function() {//Аналог $(docum
         m.innerHTML = `
         <div class="comment__heder">
             <div class="comment-name">
-                елена Петровна
-                                </div>
+                ` + element.fio + `
+            </div>
             <div class="comment-data">
-                1 октября
+                ` + element.dt + `
             </div>
         </div>
         <div class="comment__comment">
-            +++ Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde quaerat nemo, nesciunt numquam impedit sint maxime
-            cumque recusandae quo repellat, quia rem nulla. Nobis, quaerat. Quidem rem molestias sapiente minima expedita cumque
-            voluptatem aut, unde architecto voluptas, ad porro. Amet sequi dicta fugit reiciendis temporibus repellendus incidunt
-            quas sit labore.
+             ` + element.txt + `
         </div>
         `;
         document.getElementById("comments").appendChild(m);

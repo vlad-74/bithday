@@ -62,7 +62,7 @@
 
 	var txt = 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' + 'Alias nesciunt aliquam sint aliquid enim quisquam amet, minus ea sed neque perferendis corrupti' + 'rspiciatis, doloribus earum incidunt sunt rem vero ducimus fuga quaerat necessitatibus' + 'similique facere veritatis excepturi ? Earum odit autem ipsa quos.Architecto voluptatum quia' + 'doloremque autem aperiam, modi sed odit! Nobis et voluptate architecto, laudantium quisquam';
 
-	var comments = [{ id: 1, fio: 'Иванов Иван Иванович', txt: '111 ' }, { id: 2, fio: 'Петров Петр Петрович', txt: '222 ' + txt }];
+	var comments = [{ id: 1, fio: 'Иванов Иван Иванович', txt: '111 ', dt: '1 октября' }, { id: 2, fio: 'Петров Петр Петрович', txt: '222 ' + txt, dt: '1 октября' }];
 
 	function randomIntFromInterval(min, max) {
 	    return Math.floor(Math.random() * (max - min + 1) + min);
@@ -175,7 +175,7 @@
 	        m.className = "comment";
 	        // m.innerHTML = "\n\t\t<div class='photo'>\n\t\t\t<img onclick=\"fullFoto(event)\" alt=\"\" src=" + (element.img || "") + " >\n        </div>\n\t\t<div class='post-body'>\n\t\t\t<div class=\"full-name\">\n\t\t\t\t<h2>" + (element.fio || "") + " </h2>\n\t\t\t</div>\n\t\t\t<div id = \"" + element.id + "\" class='post-text'>\n\t\t\t" + (element.txt || "") + " \n\t\t\t</div>\n\t\t\t<div class='post-btn'>\n\t\t\t\t<button class=\"btn btn-read\" onclick=\"changeText(event, " + element.id + ")\"></button>\n\t\t\t</div>\n        </div>\n        ";
 
-	        m.innerHTML = "\n        <div class=\"comment__heder\">\n            <div class=\"comment-name\">\n                елена Петровна\n                                </div>\n            <div class=\"comment-data\">\n                1 октября\n            </div>\n        </div>\n        <div class=\"comment__comment\">\n            +++ Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde quaerat nemo, nesciunt numquam impedit sint maxime\n            cumque recusandae quo repellat, quia rem nulla. Nobis, quaerat. Quidem rem molestias sapiente minima expedita cumque\n            voluptatem aut, unde architecto voluptas, ad porro. Amet sequi dicta fugit reiciendis temporibus repellendus incidunt\n            quas sit labore.\n        </div>\n        ";
+	        m.innerHTML = "\n        <div class=\"comment__heder\">\n            <div class=\"comment-name\">\n                " + element.fio + "\n            </div>\n            <div class=\"comment-data\">\n                " + element.dt + "\n            </div>\n        </div>\n        <div class=\"comment__comment\">\n             " + element.txt + "\n        </div>\n        ";
 	        document.getElementById("comments").appendChild(m);
 	    }
 	});
