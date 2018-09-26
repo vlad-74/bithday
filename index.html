@@ -145,7 +145,8 @@
                         <input id="name1" class="" type="text" required placeholder="ФИО">
                     
                         <label for="txt1" class="label txt1">комментарий</label>
-                        <textarea id="txt1" class="" required name="txt" cols="10" rows="20" placeholder="Ваш комментарий" required></textarea>
+                        <textarea id="txt1" class="" required onkeypress="cleanError()" name="txt" cols="10" rows="20" placeholder="Ваш комментарий" required></textarea>
+                        <div id="error" class="invalid-feedback frm-ctrl">Не все поля заполнены.</div>
                     </form>
                     <div id="sub" onclick="">Отправить</div>
                 </div>

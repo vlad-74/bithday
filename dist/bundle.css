@@ -319,6 +319,13 @@
   .contetnt-6 .container {
     background-color: #FFFFFF; }
 
+#error {
+  display: none;
+  margin: 10px 0; }
+
+.is-invalid {
+  border: 1px solid red !important; }
+
 .demo-video-wrapper {
   height: 50%; }
 
