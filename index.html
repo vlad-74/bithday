@@ -334,22 +334,31 @@
             </div>
             <div id="get" onclick="">Получить консультацию</div>
 
-            <!-- <video width="320" controls autoplay>
-                <source src="./dist/fun.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video> -->
+            <!-- <div class="run-video">
+                <iframe src="./dist/fun.mp4" frameborder="0" allow="autoplay; encrypted-media"
+                    allowfullscreen>
+                </iframe>
+            </div> -->
 
-            <div id="myBlock" style="width: 900px; height: 300px;" 
-                data-vide-bg="./dist/fun.mp4" 
-                data-vide-options="loop: true, muted: false, position: 0% 0%">
+            <!-- Start video hero -->
+            <div class="video-hero jquery-background-video-wrapper demo-video-wrapper">
+                <video class="jquery-background-video" autoplay muted loop poster="https://d2ezlykacdqcnj.cloudfront.net/_assets/home-video/beach-waves-loop.jpg">
+                    <source src="./dist/loop.mp4" type="video/mp4">
+                    <!-- <source src="https://d2ezlykacdqcnj.cloudfront.net/_assets/home-video/beach-waves-loop.webm" type="video/webm">
+                    <source src="https://d2ezlykacdqcnj.cloudfront.net/_assets/home-video/beach-waves-loop.ogv" type="video/ogg"> -->
+                </video>
+                <div class="video-overlay"></div>
+                <div class="page-width">
+                    <div class="video-hero--content">
+                    </div>
+                </div>
             </div>
+            <!-- End video hero -->
 
-            <!-- <div style="width: 1000px; height: 500px;" data-vide-bg="mp4: path/to/video1, webm: path/to/video2, ogv: path/to/video3, poster: path/to/poster"
-                data-vide-options="posterType: jpg, loop: false, muted: false, position: 0% 0%">
-            </div> -->
-     
-            <!-- <div class="container">
-            </div> -->
+
+
+
+
         </div>
         <div class="contetnt-5">
             <img id="baraban" src="./dist/img/baraban.png">
@@ -417,7 +426,8 @@
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
-    <script src="./dist/jquery.vide.min.js"></script>
+    <script type="text/javascript" src="https://rawgit.com/BGStock/jquery-background-video/master/jquery.background-video.js" charset="utf-8"></script>
+    
     <script type="text/javascript" src="./dist/bundle.js" charset="utf-8"></script>
 </body>
 </html>

@@ -3,6 +3,7 @@ import "../style/main.scss";
 import _ from 'lodash';
 
 
+
 document.addEventListener("DOMContentLoaded", function() {//Аналог $(document).ready(function(){
     var aliceTumbling = [
         { transform: 'rotate(0)', color: '#000' },
@@ -20,12 +21,14 @@ document.addEventListener("DOMContentLoaded", function() {//Аналог $(docum
             aliceTiming
         )
     }
+
     $('ul li a').click(function () {
         $('li a').removeClass("active");
         $(this).addClass("active");
     });
 
-    $("#myBlock").vide("./dist/fun.mp4");
+    // $("#myBlock").vide("./dist/fun.mp4");
+    $(".jquery-background-video").bgVideo({ fadeIn: 1000 });
 
     document.querySelector('#start').addEventListener('click', function (ev) {
         rot();

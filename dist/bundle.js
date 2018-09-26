@@ -71,12 +71,14 @@
 	    function rot() {
 	        document.getElementById("baraban").animate(aliceTumbling, aliceTiming);
 	    }
+
 	    $('ul li a').click(function () {
 	        $('li a').removeClass("active");
 	        $(this).addClass("active");
 	    });
 
-	    $("#myBlock").vide("./dist/fun.mp4");
+	    // $("#myBlock").vide("./dist/fun.mp4");
+	    $(".jquery-background-video").bgVideo({ fadeIn: 1000 });
 
 	    document.querySelector('#start').addEventListener('click', function (ev) {
 	        rot();
