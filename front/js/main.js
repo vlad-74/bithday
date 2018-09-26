@@ -2,24 +2,19 @@ import * as data from "./data";
 import "../style/main.scss";
 import _ from 'lodash';
 
-
+function randomIntFromInterval(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
 
 document.addEventListener("DOMContentLoaded", function() {//Аналог $(document).ready(function(){
-    var aliceTumbling = [
-        { transform: 'rotate(0)', color: '#000' },
-        { color: '#431236', offset: 0.3 },
-        { transform: 'rotate(360deg) ', color: '#000' }
-    ];
-    var aliceTiming = {
-        duration: 3000,
-        iterations: Infinity
-    }
 
-    function rot(){
-        document.getElementById("baraban").animate(
-            aliceTumbling,
-            aliceTiming
-        )
+    function rot(ran){
+        // $("#img").rotate({ angle: 45 });
+        $("#baraban").rotate({
+          angle: 0,
+          animateTo: ran,
+          duration: 6000
+        });
     }
 
     $('ul li a').click(function () {
@@ -27,11 +22,12 @@ document.addEventListener("DOMContentLoaded", function() {//Аналог $(docum
         $(this).addClass("active");
     });
 
-    // $("#myBlock").vide("./dist/fun.mp4");
     $(".jquery-background-video").bgVideo({ fadeIn: 1000 });
 
     document.querySelector('#start').addEventListener('click', function (ev) {
-        rot();
+        let getRandom = randomIntFromInterval(1,10);
+        console.log(getRandom);
+        rot(720 + getRandom * 36);
     });
 
 
