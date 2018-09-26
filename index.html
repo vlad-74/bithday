@@ -8,46 +8,401 @@
 <link rel="stylesheet" type="text/css" href="./dist/reset.css">
 <link rel="stylesheet" type="text/css" href="./dist/bundle.css">
 
+<style>
+    @font-face {
+        font-family: Proxima-b;
+        src: url('./dist/font/Proxima Nova Black.otf');
+    }
+    @font-face {
+        font-family: Proxima-bd;
+        src: url('./dist/font/Proxima Nova Bold.otf');
+    }
+
+    @font-face {
+        font-family: Proxima-l;
+        src: url('./dist/font/Proxima Nova Light.otf');
+    }
+    @font-face {
+        font-family: Proxima-r;
+        src: url('./dist/font/Proxima Nova Regular.otf');
+    }
+    @font-face {
+        font-family: Proxima-s;
+        src: url('./dist/font/Proxima Nova Semibold.otf');
+    }
+
+    @font-face {
+        font-family: Proxima-n;
+        src: url('./dist/font/ProximaNova-Extrabld.otf');
+    }
+</style>
 </head>
 <body>
 
-    <header class="header">
-        <div class="header__user">
-            <div class="container">
+    <div class="wrap">
+        <header class="header">
+            <div class="header__user">
+                <div class="right-header">
+                    <div class="right-wrap">
+                        <div class="center">
+                            <div class="center__ico">
+                            O
+                            </div>
+                            <div id="user-num">
+                                1
+                            </div>
+                            <div id="user-name">
+                                Полина Головань
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="header__menu">
-            <div class="container">
+            <div class="header__menu">
+                <div class="center">
+                    <div class="logo">
+                        <img src="./dist/img/logo.png">
+                    </div>
+                    <div class="top-menu">
+                        <nav class="navecation">
+                            <ul id="navi">
+                                <li><a class="menu active" href="#contetnt-4">веселим</a></li>
+                                <li><a class="menu" href="#contetnt-4">решаем</a></li>
+                                <li><a class="menu" href="#contetnt-4">дарим</a></li>
+                                <li><a class="menu" href="#contetnt-4">дружим</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="media">
+                        <a class="btn-vk btn-media" target="_blank" href="https://share.yandex.net/go.xml?service=vkontakte&url=http://story.1gl.ru/&title=Однажды в бухгалтерии"></a>
+                        <a class="btn-fb btn-media" target="_blank" href="https://share.yandex.net/go.xml?service=facebook&url=http://story.1gl.ru/&title=Однажды в бухгалтерии"></a>
+                        <a class="btn-ok btn-media" target="_blank" href="https://share.yandex.net/go.xml?service=odnoklassniki&url=http://story.1gl.ru/&title=Однажды в бухгалтерии"></a>
+                        <a class="btn-wp btn-media" target="_blank" href="https://web.whatsapp.com/send?text=http://story.1gl.ru"></a>
+                    </div>
+                </div>
             </div>
-        </div>
-    </header>
-    <div class="contetnt-1">
-        <div class="container">
-        </div>
-    </div>
-    <div class="contetnt-2">
-        <div class="container">
-        </div>
-    </div>
-    <div class="contetnt-3">
-        <div class="container">
-        </div>
-    </div>
-    <div class="contetnt-4">
-        <div class="container">
-        </div>
-    </div>
-    <div class="contetnt-5">
-        <div class="container">
-        </div>
-    </div>
+        </header>
 
-    <div class="footer">
-        <div class="container">
+        <div class="psevdo-header">
+        </div>
+
+        <div class="contetnt-1">
+            <div class="contetnt-1__txt">
+                <h1>
+                    СИСТЕМЕ <br>ГЛАВБУХ 12 ЛЕТ
+                </h1>
+                <h1>
+                    ПРАЗДНУЕМ ВМЕСТЕ<br>ИДЕАЛЬНЫЙ ДЕНЬ<br>РОЖДЕНИЯ
+                </h1>
+            </div>
+            <!-- <div class="container">
+                <img src="./dist/img/bg1.png">
+            </div> -->
+        </div>
+        <div class="contetnt-2">
+            <img id="smile" src="./dist/img/SMILE.png">
+            <div class="text-2">
+                <div class="text-2__left">
+                    <h2>Смеемся<br> от души</h2>
+                </div>
+                <div class="text-2__right">
+                    <h3>Культовые КВНщики специально<br>
+                    для бухгалтеров в день рождения<br>
+                    Системы Главбух
+                    </h3>
+                </div>
+            </div>
+
+            <div class="movi">
+
+            </div>
+
+            <!-- <div class="container">
+                <img src="./dist/img/bg2.png">
+            </div> -->
+        </div>
+        <div class="contetnt-3">
+            <h2>Общаемся</h2>
+            <div class="contetnt-3-wrap">
+                <div class="frm-wrap">
+                    <form class="form" name="frm">
+                        <label for="name1" class="label name1">как вас зовут </label>
+                        <input id="name1" class="" type="text" placeholder="ФИО">
+                    
+                        <label for="txt1" class="label txt1">комментарий</label>
+                        <textarea id="txt1" class="" name="txt" cols="10" rows="20" placeholder="Ваш комментарий" required></textarea>
+                    </form>
+                    <div id="sub" onclick="">Отправить</div>
+                </div>
+                <div class="comments">
+                    <div class="comment">
+                        <div class="comment__heder">
+                            <div class="comment-name">
+                                елена Петровна
+                            </div>
+                            <div class="comment-data">
+                                1 октября
+                            </div>
+                            </div>
+                        <div class="comment__comment">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde quaerat nemo, nesciunt numquam impedit sint maxime
+                            cumque recusandae quo repellat, quia rem nulla. Nobis, quaerat. Quidem rem molestias sapiente minima expedita cumque
+                            voluptatem aut, unde architecto voluptas, ad porro. Amet sequi dicta fugit reiciendis temporibus repellendus incidunt
+                            quas sit labore.
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <div class="comment__heder">
+                            <div class="comment-name">
+                                елена Петровна
+                            </div>
+                            <div class="comment-data">
+                                1 октября
+                            </div>
+                        </div>
+                        <div class="comment__comment">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel, velit?
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <div class="comment__heder">
+                            <div class="comment-name">
+                                елена Петровна
+                            </div>
+                            <div class="comment-data">
+                                1 октября
+                            </div>
+                        </div>
+                        <div class="comment__comment">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel, velit?
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <div class="comment__heder">
+                            <div class="comment-name">
+                                елена Петровна
+                            </div>
+                            <div class="comment-data">
+                                1 октября
+                            </div>
+                        </div>
+                        <div class="comment__comment">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde quaerat nemo, nesciunt numquam impedit sint maxime cumque recusandae quo repellat, quia rem nulla. Nobis, quaerat. Quidem rem molestias sapiente minima expedita cumque voluptatem aut, unde architecto voluptas, ad porro. Amet sequi dicta fugit reiciendis temporibus repellendus incidunt quas sit labore.
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <div class="comment__heder">
+                            <div class="comment-name">
+                                елена Петровна
+                            </div>
+                            <div class="comment-data">
+                                1 октября
+                            </div>
+                        </div>
+                        <div class="comment__comment">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel, velit?
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <div class="comment__heder">
+                            <div class="comment-name">
+                                елена Петровна
+                            </div>
+                            <div class="comment-data">
+                                1 октября
+                            </div>
+                        </div>
+                        <div class="comment__comment">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel, velit?
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <div class="comment__heder">
+                            <div class="comment-name">
+                                елена Петровна
+                            </div>
+                            <div class="comment-data">
+                                1 октября
+                            </div>
+                        </div>
+                        <div class="comment__comment">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde quaerat nemo, nesciunt numquam impedit sint
+                            maxime
+                            cumque recusandae quo repellat, quia rem nulla. Nobis, quaerat. Quidem rem molestias sapiente minima expedita
+                            cumque
+                            voluptatem aut, unde architecto voluptas, ad porro. Amet sequi dicta fugit reiciendis temporibus repellendus
+                            incidunt
+                            quas sit labore.
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <div class="comment__heder">
+                            <div class="comment-name">
+                                елена Петровна
+                            </div>
+                            <div class="comment-data">
+                                1 октября
+                            </div>
+                        </div>
+                        <div class="comment__comment">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel, velit?
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <div class="comment__heder">
+                            <div class="comment-name">
+                                елена Петровна
+                            </div>
+                            <div class="comment-data">
+                                1 октября
+                            </div>
+                        </div>
+                        <div class="comment__comment">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel, velit?
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <div class="comment__heder">
+                            <div class="comment-name">
+                                елена Петровна
+                            </div>
+                            <div class="comment-data">
+                                1 октября
+                            </div>
+                        </div>
+                        <div class="comment__comment">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde quaerat nemo, nesciunt numquam impedit sint
+                            maxime cumque recusandae quo repellat, quia rem nulla. Nobis, quaerat. Quidem rem molestias sapiente minima
+                            expedita cumque voluptatem aut, unde architecto voluptas, ad porro. Amet sequi dicta fugit reiciendis
+                            temporibus repellendus incidunt quas sit labore.
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <div class="comment__heder">
+                            <div class="comment-name">
+                                елена Петровна
+                            </div>
+                            <div class="comment-data">
+                                1 октября
+                            </div>
+                        </div>
+                        <div class="comment__comment">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel, velit?
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <div class="comment__heder">
+                            <div class="comment-name">
+                                елена Петровна
+                            </div>
+                            <div class="comment-data">
+                                1 октября
+                            </div>
+                        </div>
+                        <div class="comment__comment">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel, velit?
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="container">
+            </div> -->
+        </div>
+        <div id="contetnt-4" class="contetnt-4">
+            <img id="red" src="./dist/img/red_round.png">
+            <h2>Не отвлекаемся <br>на работу</h2>
+            <div class="contetnt-4-text">
+                <h3>Беспрлатный доступ к Системе Главбух на 10 дней!</h3><br>
+                <h3>В подарок писменная консультация экперта</h3><br>
+                <h3>по вашему вопросу</h3>
+            </div>
+            <div id="get" onclick="">Получить консультацию</div>
+
+            <!-- <video width="320" controls autoplay>
+                <source src="./dist/fun.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video> -->
+
+            <div id="myBlock" style="width: 900px; height: 300px;" 
+                data-vide-bg="./dist/fun.mp4" 
+                data-vide-options="loop: true, muted: false, position: 0% 0%">
+            </div>
+
+            <!-- <div style="width: 1000px; height: 500px;" data-vide-bg="mp4: path/to/video1, webm: path/to/video2, ogv: path/to/video3, poster: path/to/poster"
+                data-vide-options="posterType: jpg, loop: false, muted: false, position: 0% 0%">
+            </div> -->
+     
+            <!-- <div class="container">
+            </div> -->
+        </div>
+        <div class="contetnt-5">
+            <img id="baraban" src="./dist/img/baraban.png">
+            <img id="start" src="./dist/img/start.png" >
+            
+            <h2>Радуемся<br>подаркам</h2>
+            <div class="contetnt-5-text">
+                <h3>Это колесо фортуны</h3><br>
+                <h3>и у тебя только одна</h3><br>
+                <h3>попытка</h3>
+            </div>
+            <!-- <div class="container">
+            </div> -->
+        </div>
+        
+        <div class="contetnt-6">
+            <div class="gift">
+                <img class="circle" src="./dist/img/el.png">
+                <div class="gift__txt">
+                    Доступен на год<br>к программе<br>Главбух 24/7
+                </div>
+            </div>
+            <div class="gift">
+                <img class="circle" src="./dist/img/el2.png">
+                <div class="gift__txt">
+                    Доступен на год<br>к программе<br>Главбух 24/7
+                </div>
+            </div>
+            <div class="gift">
+                <img class="circle" src="./dist/img/el3.png">
+                <div class="gift__txt">
+                    Доступен на год<br>к программе<br>Главбух 24/7
+                </div>
+            </div>
+            <div class="gift">
+                <img class="circle" src="./dist/img/el4.png">
+                <div class="gift__txt">
+                    Доступен на год<br>к программе<br>Главбух 24/7
+                </div>
+            </div>
+            <div class="gift">
+                <img class="circle" src="./dist/img/el5.png">
+                <div class="gift__txt">
+                    Доступен на год<br>к программе<br>Главбух 24/7
+                </div>
+            </div>
+            <!-- <div class="container">
+            </div> -->
+        </div>
+
+        <div class="footer">
+            <h2>Приглашаем<br>гостей</h2>
+            <div class="footer-text">
+                <h3>Разделите праздник с друзьями и коллегами</h3><br>
+                <div class="media">
+                    <a class="btn-vk btn-media" target="_blank" href="https://share.yandex.net/go.xml?service=vkontakte&url=http://story.1gl.ru/&title=Однажды в бухгалтерии"></a>
+                    <a class="btn-fb btn-media" target="_blank" href="https://share.yandex.net/go.xml?service=facebook&url=http://story.1gl.ru/&title=Однажды в бухгалтерии"></a>
+                    <a class="btn-ok btn-media" target="_blank" href="https://share.yandex.net/go.xml?service=odnoklassniki&url=http://story.1gl.ru/&title=Однажды в бухгалтерии"></a>
+                    <a class="btn-wp btn-media" target="_blank" href="https://web.whatsapp.com/send?text=http://story.1gl.ru"></a>
+                </div>
+            </div>
+            <!-- <div class="container">
+                <img src="./dist/img/bg3.png">
+            </div> -->
         </div>
     </div>
-
     <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="./dist/jquery.vide.min.js"></script>
     <script type="text/javascript" src="./dist/bundle.js" charset="utf-8"></script>
 </body>
 </html>

@@ -1,0 +1,40 @@
+.contetnt-1 {
+  background-color: #FE1B17;
+  width: 100%;
+  height: 690px;
+  .container{
+      background-color: $bg-content1;
+  }
+}
+.contetnt-2 {
+  background-color: #FFBF34;
+  width: 100%;
+  height:1600px;
+  .container{
+      background-color: $bg-content2;
+  }
+}
+.contetnt-3 {
+  width: 100%;
+  height: 950px;
+  .container{
+      background-color: $bg-content3;
+  }
+}
+
+.contetnt-4 {
+  background-color: #FFBF34;
+  width: 100%;
+  height: 800px;
+  .container{
+      background-color: $bg-content4;
+  }
+}
+
+.contetnt-5 {
+  width: 100%;
+  height: 370px;
+  .container{
+      background-color: $bg-content5;
+  }
+}

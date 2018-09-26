@@ -1,40 +1,275 @@
+.psevdo-header{
+  height: $hh-header-all;
+}
+
 .contetnt-1 {
-  background-color: #FE1B17;
+  background-color: $bg-content1;
   width: 100%;
-  height: 690px;
+  height: $hh-content1;
+
+  background-image: url('../../dist/img/bg1.png');
+  background-size: 110%;
+  background-repeat: no-repeat;
+
+  position: relative;
+
   .container{
-      background-color: $bg-content1;
+      img{
+        width: 100%;
+      }
   }
+  &__txt{
+    width: 50%;
+    // height: 100%;
+    position: absolute;
+    left: 30%;
+    top: 12%;
+    h1{
+      font-size: 50px;
+      font-family: "Proxima-b", Arial, sans-serif;
+    }
+    h1:nth-child(1) {
+      color:#7D0106;
+    }
+      h1:nth-child(2) {
+      color:white;
+    }
+  }
+
 }
 .contetnt-2 {
-  background-color: #FFBF34;
+  background-color: $bg-content2;
   width: 100%;
-  height:1600px;
-  .container{
-      background-color: $bg-content2;
+  height: $hh-content2;
+
+  background-image: url('../../dist/img/bg2.png');
+  background-size: 110%;
+  background-repeat:no-repeat;
+  position: relative;
+  #smile{
+    position: absolute;
+    left: 30%;
+    top: 12%;
   }
+
+  .container{
+      img{
+        width: 100%;
+      }
+  }
+
+  .text-2{
+    display: flex;
+    padding-top: 40px;
+    &__left{
+      flex-basis: 40%;
+      h2{
+        font-size: 50px;
+        font-family: "Proxima-bd", Arial, sans-serif;
+        text-align: center;
+      }
+    }
+    &__right{
+      flex-basis: 60%;
+      h3{
+        font-size: 25px;
+        font-family: "Proxima-bd", Arial, sans-serif;
+      }    
+    }
+  }
+    .movi{
+      width:770px;
+      height: 590px;
+      background: #000;
+      border: 1px solid green;
+      z-index: 100;
+      opacity: 0.3;
+      margin: 30px auto;
+    }
 }
 .contetnt-3 {
+  background-color: $bg-content3;
   width: 100%;
-  height: 950px;
+  height: $hh-content3;
   .container{
       background-color: $bg-content3;
+  }
+  h2{
+      font-size: 50px;
+      font-family: "Proxima-bd", Arial, sans-serif;
+      text-align: left;
+      padding-left: 150px;
+  }
+  .contetnt-3-wrap{
+    padding: 0 50px 0 150px;
+    display: flex;
+    .frm-wrap{
+      flex-basis: 30%;
+      margin-right: 20px;
+      .form{
+        display: flex;
+        flex-direction: column;
+        label{
+        font-size: 16px;
+        font-family: "Proxima-s", Arial, sans-serif;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        }
+        input{
+          line-height: 30px;
+          border-radius: 3px;
+          border: none;
+          margin-bottom: 10px;
+          padding-left: 10px;
+          font-size: 16px;
+          font-family: "Proxima-l", Arial, sans-serif;
+        }
+        textarea{
+          border-radius: 3px;
+          border: none;
+          margin-bottom: 10px;
+          padding-left: 10px;
+          font-size: 16px;
+          font-family: "Proxima-l", Arial, sans-serif;
+        }
+      }
+      #sub{
+        width: 150px;
+        height: 30px;
+        background: #000;
+        color: white;
+        padding: 6px 10px;
+        text-align: center;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+    }
+    .comments{
+      flex-basis: 70%;
+      background: #FFD154;
+      border-radius: 3px;
+      padding: 10px;
+      height: 600px;
+      overflow: auto;
+
+      .comment{
+        margin: 30px 10px;
+        &__heder{
+          display: flex;
+          margin: 10px 0;
+          .comment-name{
+            text-transform: uppercase;
+            font-size: 16px;
+            font-family: "Proxima-s", Arial, sans-serif;
+          }
+          .comment-data{
+            font-size: 10px;
+            font-family: "Proxima-r", Arial, sans-serif;
+            padding-top: 4px;
+            margin-left: 10px;
+          }
+        }
+
+        &__comment{
+          font-size: 16px;
+          font-family: "Proxima-l", Arial, sans-serif;
+        }
+      }
+
+    }
   }
 }
 
 .contetnt-4 {
-  background-color: #FFBF34;
+  position: relative;
+  padding: 50px 50px 0 150px;
+  background-color: $bg-content4;
   width: 100%;
   height: 800px;
+
+  h2{
+    font-size: 50px;
+    font-family: "Proxima-bd", Arial, sans-serif;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  .contetnt-4-text{
+    h3{
+      font-size: 25px;
+      font-family: "Proxima-n", Arial, sans-serif;
+    }
+  }
+
+  #get{
+    width: 300px;
+    height: 30px;
+    background: #FFD200;
+    color: black;
+    font-family: "Proxima-bd", Arial, sans-serif;
+    padding: 6px 5px;
+    text-align: center;
+    border-radius: 3px;
+    margin: 30px 0;
+    cursor: pointer;
+  }
+  #red{
+    position: absolute;
+    right:5%;
+    top: 5%;
+  }
+
   .container{
       background-color: $bg-content4;
   }
 }
 
 .contetnt-5 {
+  position: relative;
+  background-color: $bg-content5;
   width: 100%;
-  height: 370px;
+  height: $hh-content5;
+  padding: 50px 50px 0 150px;
+  
+  h2{
+    font-size: 50px;
+    font-family: "Proxima-bd", Arial, sans-serif;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  .contetnt-5-text{
+    h3{
+      font-size: 30px;
+      font-family: "Proxima-n", Arial, sans-serif;
+    }
+  }
+  #baraban{
+    position: absolute;
+    right: 11%;
+    top: 15%;
+  }
+
+  #start{
+    position: absolute;
+    left: 25%;
+    top: 55%;
+    cursor: pointer;
+  }
+
+
   .container{
       background-color: $bg-content5;
+  }
+
+}
+
+.contetnt-6 {
+  display: flex;
+  justify-content: space-between;
+  padding: 90px 50px 0 150px;
+  background-color: $bg-content6;
+  width: 100%;
+  height: $hh-content6;
+  .container{
+      background-color: $bg-content6;
   }
 }

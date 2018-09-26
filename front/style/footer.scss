@@ -2,7 +2,73 @@
   background-color: $bg-footer;
   width: 100%;
   height: $hh-footer;
+
+  background-image: url('../../dist/img/bg3.png');
+  background-size: 100%;
+  background-repeat:no-repeat;
+
+  padding: 70px 50px 0 150px;
+  color: white;
+  h2{
+    font-size: 50px;
+    font-family: "Proxima-bd", Arial, sans-serif;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  .footer-text{
+    h3{
+      font-size: 30px;
+      font-family: "Proxima-n", Arial, sans-serif;
+    }
+  }
+
+  .media{
+      flex-basis: 12%;
+
+      display: flex;
+      justify-content: left;
+      margin-right: 50px;
+      margin-top: 50px;
+      .btn-media{
+          border-radius: 5px;
+          height: 80px; 
+          width: 80px;
+          background-size: 100%;
+          background-color: transparent;
+          background-repeat:no-repeat;
+          border:none;
+          line-height:50px;
+          margin-right: 10px;
+      }
+      .btn-vk{
+          background-image:url('../../dist/img/media/BK.png');
+      }
+      .btn-fb{
+          background-image:url('../../dist/img/media/FB.png');
+      }
+      .btn-ok{
+          background-image:url('../../dist/img/media/OK.png');
+      }
+      .btn-wp{
+          background-image:url('../../dist/img/media/WA.png');
+      }
+      .btn-vk:hover{
+          background-image:url('../../dist/img/media/on/BK.png');
+      }
+      .btn-fb:hover{
+          background-image:url('../../dist/img/media/on/FB.png');
+      }
+      .btn-ok:hover{
+          background-image:url('../../dist/img/media/on/OK.png');
+      }
+      .btn-wp:hover{
+          background-image:url('../../dist/img/media/on/WA.png');
+      }
+  }
+
     .container{
-      background-color: $bg-footer;
+      img{
+        width: 100%;
+      }
   }
 }
