@@ -176,9 +176,18 @@ document.addEventListener("DOMContentLoaded", function() {//Аналог $(docum
     checkUser();
 
   
-    // document.getElementsByTagName("iframe")[i].addEventListener("click", function(ev) {
-    //     alert('!!!!!');
-    // });
+    console.log(document.getElementsByTagName("iframe")); //keydown load wheel
+
+
+    document.getElementById("movi-big1").addEventListener("click", function(ev) {
+        document.getElementsByTagName("iframe")[0].src = "https://www.youtube.com/embed/9prl82wE9xo";
+    });
+    document.getElementById("movi-big2").addEventListener("click", function (ev) {
+        document.getElementsByTagName("iframe")[0].src = "https://www.youtube.com/embed/a5uck7vTp2E"
+    });
+    document.getElementById("movi-big3").addEventListener("click", function (ev) {
+        document.getElementsByTagName("iframe")[0].src = "https://www.youtube.com/embed/5m_Hj3eVQiE";
+    });
 
 
     for (let i = 0; i < document.getElementsByClassName("error-clean").length; i++) {

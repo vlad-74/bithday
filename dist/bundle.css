@@ -152,6 +152,15 @@
       .contetnt-2 .text-2__right h3 {
         font-size: 25px;
         font-family: "Proxima-bd", Arial, sans-serif; }
+  .contetnt-2 #movi-big {
+    z-index: 999;
+    width: 300px;
+    height: 300px;
+    background: transparent;
+    border: 1px solid red;
+    position: absolute;
+    top: 10px;
+    left: 330px; }
   .contetnt-2 .movi {
     width: 770px;
     height: 590px;
@@ -164,12 +173,34 @@
       margin: 0 auto; }
       .contetnt-2 .movi__big iframe {
         width: 100%;
-        height: 100%; }
+        height: 100%;
+        z-index: 1; }
     .contetnt-2 .movi__more {
       display: flex;
-      height: 30%; }
+      height: 30%;
+      position: relative; }
       .contetnt-2 .movi__more iframe {
         width: 33%; }
+      .contetnt-2 .movi__more #movi-big1 {
+        z-index: 999;
+        width: 33%;
+        height: 100%;
+        background: transparent;
+        position: absolute; }
+      .contetnt-2 .movi__more #movi-big2 {
+        z-index: 999;
+        width: 33%;
+        height: 100%;
+        background: transparent;
+        position: absolute;
+        left: 33%; }
+      .contetnt-2 .movi__more #movi-big3 {
+        z-index: 999;
+        width: 33%;
+        height: 100%;
+        background: transparent;
+        position: absolute;
+        left: 66%; }
 
 .contetnt-3 {
   background-color: #FFBF34;
