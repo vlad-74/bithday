@@ -9,21 +9,66 @@ var txt = 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' +
     + 'doloremque autem aperiam, modi sed odit! Nobis et voluptate architecto, laudantium quisquam'
 ;
 
+var blockStart = false;
 
 var comments = [
     { id: 1, fio: 'Иванов Иван Иванович', txt: '111 ', dt: '1 октября' },
     { id: 2, fio: 'Петров Петр Петрович', txt: '222 ' + txt, dt: '1 октября' }
 ];
 
+function checkUser(){
+    if (blockStart) {
+        blockButton('start');
+    }
+};
+
 
 function randomIntFromInterval(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
+function blockButton(id) {
+    document.getElementById(id).style.pointerEvents = "none";
+    document.getElementById(id).style.opacity = ".3";
+}
+
+function rotateBaraban(ran) {
+  $("#baraban").rotate({
+    angle: 0,
+    animateTo: ran,
+    duration: 6000
+  });
+}
+
+function viewComments() {
+    for (var i = 0; i < comments.length; i++) {
+        const element = comments[i];
+        addPost(element);
+    }
+}
+
+function addPost(element) {
+    var m = document.createElement('div');
+    m.id = element.dt;
+    m.className = "comment";
+    m.innerHTML = `
+        <div class="comment__heder">
+            <div class="comment-name">
+                ` + element.fio + `
+            </div>
+            <div class="comment-data">
+                ` + element.dt + `
+            </div>
+        </div>
+        <div class="comment__comment">
+             ` + element.txt + `
+        </div>
+        `;
+    document.getElementById("comments").appendChild(m);
+}
+
 function sendArray(arraySend){
-    console.log(arraySend);
-    document.getElementById("sub").style.pointerEvents = "none";
-    document.getElementById("sub").style.opacity = ".3";
+    blockButton("sub");
     for (let i = 0; i < 2; i++) {
         document.forms[0][i].value ="";
     }
@@ -85,6 +130,8 @@ document.addEventListener("DOMContentLoaded", function() {//Аналог $(docum
 
     viewComments();
 
+    checkUser()
+
     document.getElementById("name1").addEventListener('keydown', function (ev) {
         cleanError();
     });
@@ -97,14 +144,6 @@ document.addEventListener("DOMContentLoaded", function() {//Аналог $(docum
         validForm();
     });
 
-    function rot(ran){
-        $("#baraban").rotate({
-          angle: 0,
-          animateTo: ran,
-          duration: 6000
-        });
-    }
-
     $('ul li a').click(function () {
         $('li a').removeClass("active");
         $(this).addClass("active");
@@ -114,34 +153,9 @@ document.addEventListener("DOMContentLoaded", function() {//Аналог $(docum
 
     document.querySelector('#start').addEventListener('click', function (ev) {
         let getRandom = randomIntFromInterval(1,10);
-        rot(720 + getRandom * 36);
+        rotateBaraban(720 + getRandom * 36);
+        blockButton('start');
     });
 
-    function viewComments() {
-        for (var i = 0; i < comments.length; i++) {
-            const element = comments[i];
-            addPost(element);
-        }
-    }
-
-    function addPost(element) {
-        var m = document.createElement('div');
-        m.id = element.dt;
-        m.className = "comment";
-        m.innerHTML = `
-        <div class="comment__heder">
-            <div class="comment-name">
-                ` + element.fio + `
-            </div>
-            <div class="comment-data">
-                ` + element.dt + `
-            </div>
-        </div>
-        <div class="comment__comment">
-             ` + element.txt + `
-        </div>
-        `;
-        document.getElementById("comments").appendChild(m);
-    }
 });
 

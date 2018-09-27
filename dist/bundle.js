@@ -62,16 +62,50 @@
 
 	var txt = 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' + 'Alias nesciunt aliquam sint aliquid enim quisquam amet, minus ea sed neque perferendis corrupti' + 'rspiciatis, doloribus earum incidunt sunt rem vero ducimus fuga quaerat necessitatibus' + 'similique facere veritatis excepturi ? Earum odit autem ipsa quos.Architecto voluptatum quia' + 'doloremque autem aperiam, modi sed odit! Nobis et voluptate architecto, laudantium quisquam';
 
+	var blockStart = false;
+
 	var comments = [{ id: 1, fio: 'Иванов Иван Иванович', txt: '111 ', dt: '1 октября' }, { id: 2, fio: 'Петров Петр Петрович', txt: '222 ' + txt, dt: '1 октября' }];
+
+	function checkUser() {
+	    if (blockStart) {
+	        blockButton('start');
+	    }
+	};
 
 	function randomIntFromInterval(min, max) {
 	    return Math.floor(Math.random() * (max - min + 1) + min);
 	}
 
+	function blockButton(id) {
+	    document.getElementById(id).style.pointerEvents = "none";
+	    document.getElementById(id).style.opacity = ".3";
+	}
+
+	function rotateBaraban(ran) {
+	    $("#baraban").rotate({
+	        angle: 0,
+	        animateTo: ran,
+	        duration: 6000
+	    });
+	}
+
+	function viewComments() {
+	    for (var i = 0; i < comments.length; i++) {
+	        var element = comments[i];
+	        addPost(element);
+	    }
+	}
+
+	function addPost(element) {
+	    var m = document.createElement('div');
+	    m.id = element.dt;
+	    m.className = "comment";
+	    m.innerHTML = "\n        <div class=\"comment__heder\">\n            <div class=\"comment-name\">\n                " + element.fio + "\n            </div>\n            <div class=\"comment-data\">\n                " + element.dt + "\n            </div>\n        </div>\n        <div class=\"comment__comment\">\n             " + element.txt + "\n        </div>\n        ";
+	    document.getElementById("comments").appendChild(m);
+	}
+
 	function sendArray(arraySend) {
-	    console.log(arraySend);
-	    document.getElementById("sub").style.pointerEvents = "none";
-	    document.getElementById("sub").style.opacity = ".3";
+	    blockButton("sub");
 	    for (var i = 0; i < 2; i++) {
 	        document.forms[0][i].value = "";
 	    }
@@ -131,6 +165,8 @@
 
 	    viewComments();
 
+	    checkUser();
+
 	    document.getElementById("name1").addEventListener('keydown', function (ev) {
 	        cleanError();
 	    });
@@ -143,14 +179,6 @@
 	        validForm();
 	    });
 
-	    function rot(ran) {
-	        $("#baraban").rotate({
-	            angle: 0,
-	            animateTo: ran,
-	            duration: 6000
-	        });
-	    }
-
 	    $('ul li a').click(function () {
 	        $('li a').removeClass("active");
 	        $(this).addClass("active");
@@ -160,23 +188,9 @@
 
 	    document.querySelector('#start').addEventListener('click', function (ev) {
 	        var getRandom = randomIntFromInterval(1, 10);
-	        rot(720 + getRandom * 36);
+	        rotateBaraban(720 + getRandom * 36);
+	        blockButton('start');
 	    });
-
-	    function viewComments() {
-	        for (var i = 0; i < comments.length; i++) {
-	            var element = comments[i];
-	            addPost(element);
-	        }
-	    }
-
-	    function addPost(element) {
-	        var m = document.createElement('div');
-	        m.id = element.dt;
-	        m.className = "comment";
-	        m.innerHTML = "\n        <div class=\"comment__heder\">\n            <div class=\"comment-name\">\n                " + element.fio + "\n            </div>\n            <div class=\"comment-data\">\n                " + element.dt + "\n            </div>\n        </div>\n        <div class=\"comment__comment\">\n             " + element.txt + "\n        </div>\n        ";
-	        document.getElementById("comments").appendChild(m);
-	    }
 	});
 
 /***/ }),
