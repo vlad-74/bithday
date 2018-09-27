@@ -126,9 +126,8 @@ document.addEventListener("DOMContentLoaded", function() {//Аналог $(docum
 
     function addPost(element) {
         var m = document.createElement('div');
+        m.id = element.dt;
         m.className = "comment";
-        // m.innerHTML = "\n\t\t<div class='photo'>\n\t\t\t<img onclick=\"fullFoto(event)\" alt=\"\" src=" + (element.img || "") + " >\n        </div>\n\t\t<div class='post-body'>\n\t\t\t<div class=\"full-name\">\n\t\t\t\t<h2>" + (element.fio || "") + " </h2>\n\t\t\t</div>\n\t\t\t<div id = \"" + element.id + "\" class='post-text'>\n\t\t\t" + (element.txt || "") + " \n\t\t\t</div>\n\t\t\t<div class='post-btn'>\n\t\t\t\t<button class=\"btn btn-read\" onclick=\"changeText(event, " + element.id + ")\"></button>\n\t\t\t</div>\n        </div>\n        ";
-        
         m.innerHTML = `
         <div class="comment__heder">
             <div class="comment-name">
@@ -146,20 +145,3 @@ document.addEventListener("DOMContentLoaded", function() {//Аналог $(docum
     }
 });
 
-
-{/* <div class="comment">
-    <div class="comment__heder">
-        <div class="comment-name">
-            елена Петровна
-                            </div>
-        <div class="comment-data">
-            1 октября
-                            </div>
-    </div>
-    <div class="comment__comment">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde quaerat nemo, nesciunt numquam impedit sint maxime
-        cumque recusandae quo repellat, quia rem nulla. Nobis, quaerat. Quidem rem molestias sapiente minima expedita cumque
-        voluptatem aut, unde architecto voluptas, ad porro. Amet sequi dicta fugit reiciendis temporibus repellendus incidunt
-        quas sit labore.
-    </div>
-</div> */}
