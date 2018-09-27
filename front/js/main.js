@@ -85,46 +85,57 @@ function cleanError() {
     }
 }
 
-function validForm() {
-    var typeError;
+// ===============
 
-    var array = [0, 1];
-    var arraySend = [];
-    var er = false;
+function validForm(item) {
+    let typeError;
+
+    let array = item === 0 ? [0, 1] : [0, 1, 2];
+    let idError = item === 0 ? "error" : "error2";
+    let arraySend = [];
+    let er = false;
+
+    console.log(document.forms, array);
 
     for (let i = 0; i < array.length; i++) {
         let j = array[i];
-        // console.log(document.forms[0], );
-        arraySend.push(document.forms[0][j].value.trim());
-    
+        arraySend.push(document.forms[item][j].value.trim());
+
         if (
-            !document.forms[0][j].validity.valid ||
-            !document.forms[0][j].value.trim().length 
+            !document.forms[item][j].validity.valid ||
+            !document.forms[item][j].value.trim().length
         ) {
             er = true;
-            document.forms[0][j].focus();
+            document.forms[item][j].focus();
 
-            document.forms[0][j].classList.add("is-invalid");
+            document.forms[item][j].classList.add("is-invalid");
 
-            typeError = document.getElementById("error");
-
-            console.log("111", document.forms);
+            typeError = document.getElementById(idError);
 
             if (j === 0) {
                 typeError.innerText = "Заполните поле Имя и Фамилия";
             }
             if (j === 1) {
-                typeError.innerText = "Добавьте свою историю";
+                typeError.innerText = item === 0 ? "Добавьте свою историю" : "Добавьте свой email";
+            }
+            if (j === 2) {
+                typeError.innerText = "Добавьте телефон";
             }
 
             typeError.style.display = "block";
         }
     }
     if (!er) {
-        document.getElementById("error").style.display = "none";
+        document.getElementById(idError).style.display = "none";
         sendArray(arraySend);
     }
 }
+
+document.getElementById("sub2").addEventListener('click', function (ev) {
+    validForm(1);
+});
+// =================
+
 
 document.addEventListener("DOMContentLoaded", function() {//Аналог $(document).ready(function(){
 
@@ -141,7 +152,7 @@ document.addEventListener("DOMContentLoaded", function() {//Аналог $(docum
     });
 
     document.getElementById("sub").addEventListener('click', function (ev) {
-        validForm();
+        validForm(0);
     });
 
     $('ul li a').click(function () {

@@ -283,6 +283,52 @@
     cursor: pointer;
   }
 
+  .frm2-wrap{
+    background: #292929;
+    position: absolute;
+    left: 20%;
+    top: 86%;
+    padding: 20px;
+    width: 40%;
+    color: white;
+    #congrat{
+      // margin: 0px 10%;
+    }
+    p{
+      color: white;
+      margin: 20px;
+      width: 80%;
+      padding-left: 25px;
+    }
+    form{
+      display: flex;
+      flex-direction: column;
+      input, label{
+        width:80%;
+        margin: 2px auto;
+      }
+      input{
+        margin-bottom: 10px;
+            height: 30px;
+      }
+    }
+    #error2{
+      margin: 10px auto;
+      color: red;
+      display: none;
+    }
+    #sub2{
+        width: 190px;
+        height: 30px;
+        background: #FFD200;
+        color: black;
+        padding: 6px 10px;
+        text-align: center;
+        border-radius: 3px;
+        cursor: pointer;
+        margin: 10px 42px;
+    }
+  }
 
   .container{
       background-color: $bg-content5;
@@ -305,6 +351,7 @@
 #error{
   display: none;
   margin: 10px 0;
+  color:red;
 }
 
 .is-invalid{
