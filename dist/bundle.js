@@ -91,8 +91,30 @@
 	    });
 
 	    setTimeout(function () {
+	        openForm(ran);
 	        document.getElementById("frm2-wrap").style.display = "block";
 	    }, duration + 500);
+	}
+
+	function openForm(item) {
+	    item = (item - 720) / 36;
+	    if (item > 5) {
+	        item = item - 5;
+	    }
+
+	    if (item === 1) {
+	        document.getElementById("frm2-txt").innerHTML = "Вы выйграли: Доступ к программе Главбух! Куда Вам его отправить?";
+	    } else if (item === 2) {
+	        document.getElementById("frm2-txt").innerHTML = "Вы выйграли: Электронная книжка! Куда Вам его отправить?";
+	    } else if (item === 3) {
+	        document.getElementById("frm2-txt").innerHTML = "Вы выйграли: Сертификат Летуаль! Куда Вам его отправить?";
+	    } else if (item === 4) {
+	        document.getElementById("frm2-txt").innerHTML = "Вы выйграли: Подарок от журнала! Куда Вам его отправить?";
+	    } else if (item === 5) {
+	        document.getElementById("frm2-txt").innerHTML = "Вы выйграли: Шампанское! Куда Вам его отправить?";
+	    }
+
+	    document.getElementById("frm2-wrap").style.display = "block";
 	}
 
 	function viewComments() {
@@ -185,6 +207,10 @@
 	    viewComments();
 
 	    checkUser();
+
+	    // document.getElementsByTagName("iframe")[i].addEventListener("click", function(ev) {
+	    //     alert('!!!!!');
+	    // });
 
 	    for (var i = 0; i < document.getElementsByClassName("error-clean").length; i++) {
 	        document.getElementsByClassName("error-clean")[i].addEventListener("keydown", function (ev) {
