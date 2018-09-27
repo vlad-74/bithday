@@ -104,35 +104,39 @@
 	    document.getElementById("comments").appendChild(m);
 	}
 
-	function sendArray(arraySend) {
-	    blockButton("sub");
-	    for (var i = 0; i < 2; i++) {
-	        document.forms[0][i].value = "";
+	function sendArray(arraySend, sub, item, length) {
+	    console.log(arraySend);
+
+	    blockButton(sub);
+
+	    for (var i = 0; i < length; i++) {
+	        document.forms[item][i].value = "";
 	    }
 	}
 
-	function cleanError() {
-	    var array = [0, 1];
-	    if (document.getElementById("error")) {
-	        document.getElementById("error").style.display = "none";
+	function cleanError(ev) {
+
+	    var idError = ev.target.form.className === 'form' ? "error" : "error2";
+	    var array = ev.target.form.className === 'form' ? [0, 1] : [0, 1, 2];
+	    var idForm = ev.target.form.className === "form" ? 0 : 1;
+
+	    if (document.getElementById(idError)) {
+	        document.getElementById(idError).style.display = "none";
 	        for (var i = 0; i < array.length; i++) {
 	            var j = array[i];
-	            document.forms[0][j].classList.remove("is-invalid");
+	            document.forms[idForm][j].classList.remove("is-invalid");
 	        }
 	    }
 	}
-
-	// ===============
 
 	function validForm(item) {
 	    var typeError = undefined;
 
 	    var array = item === 0 ? [0, 1] : [0, 1, 2];
 	    var idError = item === 0 ? "error" : "error2";
+	    var sub = item === 0 ? "sub" : "sub2";
 	    var arraySend = [];
 	    var er = false;
-
-	    console.log(document.forms, array);
 
 	    for (var i = 0; i < array.length; i++) {
 	        var j = array[i];
@@ -161,14 +165,13 @@
 	    }
 	    if (!er) {
 	        document.getElementById(idError).style.display = "none";
-	        sendArray(arraySend);
+	        sendArray(arraySend, sub, item, array.length);
+
+	        if (item === 1) {
+	            document.getElementById("frm2-wrap").style.display = "none";
+	        }
 	    }
 	}
-
-	document.getElementById("sub2").addEventListener('click', function (ev) {
-	    validForm(1);
-	});
-	// =================
 
 	document.addEventListener("DOMContentLoaded", function () {
 	    //Аналог $(document).ready(function(){
@@ -177,16 +180,18 @@
 
 	    checkUser();
 
-	    document.getElementById("name1").addEventListener('keydown', function (ev) {
-	        cleanError();
-	    });
-
-	    document.getElementById("txt1").addEventListener('keydown', function (ev) {
-	        cleanError();
-	    });
+	    for (var i = 0; i < document.getElementsByClassName("error-clean").length; i++) {
+	        document.getElementsByClassName("error-clean")[i].addEventListener("keydown", function (ev) {
+	            cleanError(ev);
+	        });
+	    }
 
 	    document.getElementById("sub").addEventListener('click', function (ev) {
 	        validForm(0);
+	    });
+
+	    document.getElementById("sub2").addEventListener('click', function (ev) {
+	        validForm(1);
 	    });
 
 	    $('ul li a').click(function () {

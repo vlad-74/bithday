@@ -309,7 +309,7 @@
     left: 25%;
     top: 55%;
     cursor: pointer; }
-  .contetnt-5 .frm2-wrap {
+  .contetnt-5 #frm2-wrap {
     background: #292929;
     position: absolute;
     left: 20%;
@@ -317,25 +317,25 @@
     padding: 20px;
     width: 40%;
     color: white; }
-    .contetnt-5 .frm2-wrap p {
+    .contetnt-5 #frm2-wrap p {
       color: white;
       margin: 20px;
       width: 80%;
       padding-left: 25px; }
-    .contetnt-5 .frm2-wrap form {
+    .contetnt-5 #frm2-wrap form {
       display: flex;
       flex-direction: column; }
-      .contetnt-5 .frm2-wrap form input, .contetnt-5 .frm2-wrap form label {
+      .contetnt-5 #frm2-wrap form input, .contetnt-5 #frm2-wrap form label {
         width: 80%;
         margin: 2px auto; }
-      .contetnt-5 .frm2-wrap form input {
+      .contetnt-5 #frm2-wrap form input {
         margin-bottom: 10px;
         height: 30px; }
-    .contetnt-5 .frm2-wrap #error2 {
+    .contetnt-5 #frm2-wrap #error2 {
       margin: 10px auto;
       color: red;
       display: none; }
-    .contetnt-5 .frm2-wrap #sub2 {
+    .contetnt-5 #frm2-wrap #sub2 {
       width: 190px;
       height: 30px;
       background: #FFD200;
