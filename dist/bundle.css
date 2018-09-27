@@ -310,6 +310,7 @@
     top: 55%;
     cursor: pointer; }
   .contetnt-5 #frm2-wrap {
+    display: none;
     background: #292929;
     position: absolute;
     left: 20%;
@@ -317,6 +318,13 @@
     padding: 20px;
     width: 40%;
     color: white; }
+    .contetnt-5 #frm2-wrap #exit {
+      width: 5%;
+      background: white;
+      border-radius: 50%;
+      position: absolute;
+      top: 10px;
+      right: 10px; }
     .contetnt-5 #frm2-wrap p {
       color: white;
       margin: 20px;

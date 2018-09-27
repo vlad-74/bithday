@@ -33,11 +33,17 @@ function blockButton(id) {
 }
 
 function rotateBaraban(ran) {
+
+  const duration = 6000;
   $("#baraban").rotate({
     angle: 0,
     animateTo: ran,
-    duration: 6000
+    duration: duration
   });
+
+  setTimeout(() => {
+      document.getElementById("frm2-wrap").style.display = "block";
+  }, duration + 500);
 }
 
 function viewComments() {
@@ -162,6 +168,11 @@ document.addEventListener("DOMContentLoaded", function() {//Аналог $(docum
     document.getElementById("sub2").addEventListener('click', function (ev) {
         validForm(1);
     });
+
+    document.getElementById("exit").addEventListener("click", function(ev) {
+        document.getElementById("frm2-wrap").style.display = "none";
+    });
+
 
     $('ul li a').click(function () {
         $('li a').removeClass("active");
