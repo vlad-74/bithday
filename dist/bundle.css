@@ -543,6 +543,11 @@
   .footer .footer-text h3 {
     font-size: 30px;
     font-family: "Proxima-n", Arial, sans-serif; }
+  .footer .footer-text h6 {
+    color: black;
+    margin: 20px 0;
+    font-size: 15px;
+    font-family: "Proxima-n", Arial, sans-serif; }
   .footer .media {
     flex-basis: 12%;
     display: flex;
