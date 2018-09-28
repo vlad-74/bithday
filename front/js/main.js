@@ -176,7 +176,7 @@ document.addEventListener("DOMContentLoaded", function() {//Аналог $(docum
     checkUser();
 
   
-    console.log(document.getElementsByTagName("iframe")); //keydown load wheel
+    // console.log(document.getElementsByTagName("iframe")); //keydown load wheel
 
 
     document.getElementById("movi-big1").addEventListener("click", function(ev) {

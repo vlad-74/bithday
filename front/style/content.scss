@@ -36,6 +36,7 @@
 .content-2 {
   background-color: $bg-content2;
   width: 100%;
+  min-height: 300px;
   .container-content-2{
     position: relative;
     img{
@@ -84,7 +85,7 @@
         left: 330px;
       }
       .movi{
-        width:770px;
+        width: 80%;
         height: 590px;
         background: #000;
         border: 1px solid green;
@@ -139,15 +140,20 @@
   background-color: $bg-content3;
   width: 100%;
   .container-content-3{
+    position: relative;
     height: $hh-content3;
     h2{
         font-size: 50px;
         font-family: "Proxima-bd", Arial, sans-serif;
         text-align: left;
-        padding-left: 150px;
+        position: absolute;
+        left: 10%;
     }
     .content-3-wrap{
-      padding: 0 50px 0 150px;
+      position: absolute;
+      top: 10%;
+      left: 12%;
+      // padding: 0 50px 0 136px;
       display: flex;
       .frm-wrap{
         flex-basis: 30%;
@@ -197,7 +203,7 @@
         padding: 10px;
         height: 600px;
         overflow: auto;
-
+        margin-right: 10px;
         .comment{
           margin: 30px 10px;
           &__heder{
@@ -230,7 +236,7 @@
 .content-4 {
   .container-content-4{
     position: relative;
-    padding: 50px 50px 0 150px;
+    padding: 50px 50px 0 136px;
     background-color: $bg-content4;
     width: 100%;
     height: 800px;
@@ -269,6 +275,7 @@
       position: absolute;
       right:5%;
       top: 5%;
+      width: 20%;
     }
     .run-video{
       width: 100%;
@@ -287,7 +294,7 @@
     position: relative;
     width: 100%;
     height: $hh-content5;
-    padding: 50px 50px 0 150px;
+    padding: 50px 50px 0 136px;
     
     h2{
       font-size: 50px;
@@ -305,6 +312,7 @@
       position: absolute;
       right: 11%;
       top: 15%;
+      width: 45%;
     }
 
     #start{
@@ -312,6 +320,7 @@
       left: 25%;
       top: 55%;
       cursor: pointer;
+      width: 25%;
     }
 
     #frm2-wrap{
@@ -371,13 +380,19 @@
 }
 
 .content-6 {
+  width: 100%;
   .container-content-6{
     display: flex;
     justify-content: space-between;
-    padding: 90px 50px 0 150px;
+    padding: 90px 50px 0 136px;
     background-color: $bg-content6;
     width: 100%;
     height: $hh-content6;
+    .gift{
+      img{
+        width: 90px;
+      }
+    }
   }
 }
 

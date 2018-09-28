@@ -56,7 +56,7 @@
 
 	__webpack_require__(2);
 
-	var _lodash = __webpack_require__(6);
+	var _lodash = __webpack_require__(14);
 
 	var _lodash2 = _interopRequireDefault(_lodash);
 
@@ -208,7 +208,7 @@
 
 	    checkUser();
 
-	    console.log(document.getElementsByTagName("iframe")); //keydown load wheel
+	    // console.log(document.getElementsByTagName("iframe")); //keydown load wheel
 
 	    document.getElementById("movi-big1").addEventListener("click", function (ev) {
 	        document.getElementsByTagName("iframe")[0].src = "https://www.youtube.com/embed/9prl82wE9xo";
@@ -378,7 +378,15 @@
 /* 3 */,
 /* 4 */,
 /* 5 */,
-/* 6 */
+/* 6 */,
+/* 7 */,
+/* 8 */,
+/* 9 */,
+/* 10 */,
+/* 11 */,
+/* 12 */,
+/* 13 */,
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(module, global) {/**
@@ -12733,10 +12741,10 @@
 	  }
 	}.call(this));
 
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)(module), (function() { return this; }())))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(15)(module), (function() { return this; }())))
 
 /***/ }),
-/* 7 */
+/* 15 */
 /***/ (function(module, exports) {
 
 	module.exports = function(module) {

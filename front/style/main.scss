@@ -3,6 +3,7 @@
 @import "top-menu.scss";
 @import "content.scss";
 @import "footer.scss";
+@import "media.scss";
 
 * {
     box-sizing: border-box;
@@ -14,9 +15,8 @@
   margin: auto;
 } 
 
-// .wrap{
-//   font-family: "Proxima-l", Arial, sans-serif;
-//   max-width: 1200px;
-//   margin: auto;
+
+// div{
+//   border: 1px solid green;
 // }
 
