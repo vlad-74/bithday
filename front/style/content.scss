@@ -6,7 +6,7 @@
   background-color: $bg-content1;
   width: 100%;
   .container{
-    max-width: 1500px;
+    max-width: 1200px;
   }
   .container-content-1{
     position: relative;
@@ -17,10 +17,10 @@
       width: 50%;
       // height: 100%;
       position: absolute;
-      left: 30%;
-      top: 12%;
+      left: 15%;
+      top: 18%;
       h1{
-        font-size: 50px;
+        font-size: 60px;
         font-family: "Proxima-b", Arial, sans-serif;
       }
       h1:nth-child(1) {
