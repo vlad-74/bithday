@@ -1,134 +1,134 @@
 .header {
-  width:1200px;
-  height: $hh-header-all;
+  width: 100%;
   position: fixed;
   top: 0;
+  background-color: $bg-header1;
   z-index: 9999;
   color:white;
     &__user{
-        background-color: $bg-header1;
-        height: $hh-header1;
-        position: relative;
+        .container-header{
+            height: $hh-header1;
+            position: relative;
 
-        .right-header{
-            position: absolute;
-            right: 40px;
-            .right-wrap{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                .center{
-                   display: flex;
-                   margin: 5px 0;
-                //    position: relative
-                   &__ico{
-                       padding: 5px;
-                   }
-                   #user-num{
-                      padding: 5px 10px;
-                      background:#EA3E34;
-                      border-radius: 5px; 
-                   }
-                    #user-name{
-                      padding: 5px 10px;
-                      background:#317583;
-                      border-radius: 0 5px 5px 0;
-                      margin-right: 10px;
-                   }
+            .right-header{
+                position: absolute;
+                right: 40px;
+                .right-wrap{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    .center{
+                    display: flex;
+                    margin: 5px 0;
+                    //    position: relative
+                    &__ico{
+                        padding: 5px;
+                    }
+                    #user-num{
+                        padding: 5px 10px;
+                        background:#EA3E34;
+                        border-radius: 5px; 
+                    }
+                        #user-name{
+                        padding: 5px 10px;
+                        background:#317583;
+                        border-radius: 0 5px 5px 0;
+                        margin-right: 10px;
+                    }
+                    }
                 }
             }
         }
-
-
-
     }
     &__menu{
         background-color: $bg-header2;
         height: $hh-header2;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        
-        .center{
+        .container-header2{
             display: flex;
-            margin: 5px 0;
-            .logo{
-                margin-left: 50px;
-                flex-basis: 28%;
-            }
-            .top-menu{
-                // max-width:960px;
-                margin: auto;
-                flex-basis: 60%;
-                position: relative;
-
-                .navecation{
-                    position: absolute;
-                    right: 10px;
-                    top: -15px;
-                }
-                nav ul li{
-                list-style:none;
-                float:left;
-                padding-right:20px;
-                }
-                nav ul li a{
-                text-decoration:none;
-                color :white;
-                // font-weight: bold;
-                padding:5px 10px;
-                text-transform: uppercase;
-                line-height: 25px;
-                border-radius: 3px;
-                }
-                nav ul li a:hover{
-                    border-bottom: 2px solid white;
-                    border-radius: 0;
-                }
-                .active{
-                background-color:white;
-                color:black;
-                }
-            }
-            .media{
-                flex-basis: 12%;
-
+            flex-direction: column;
+            justify-content: center;
+            
+            .center{
                 display: flex;
-                justify-content: space-between;
-                margin-right: 50px;
-                .btn-media{
-                    border-radius: 5px;
-                    height: 40px; 
-                    width: 40px;
-                    background-size: 100%;
-                    background-color: transparent;
-                    background-repeat:no-repeat;
-                    border:none;
-                    line-height:50px;
+                margin: 20px 0;
+                .logo{
+                    margin-left: 50px;
+                    flex-basis: 28%;
                 }
-                .btn-vk{
-                    background-image:url('../../dist/img/media/BK.png');
+                .top-menu{
+                    // max-width:960px;
+                    margin: auto;
+                    flex-basis: 60%;
+                    position: relative;
+
+                    .navecation{
+                        position: absolute;
+                        right: 10px;
+                        top: -15px;
+                    }
+                    nav ul li{
+                    list-style:none;
+                    float:left;
+                    padding-right:20px;
+                    }
+                    nav ul li a{
+                    text-decoration:none;
+                    color :white;
+                    // font-weight: bold;
+                    padding:5px 10px;
+                    text-transform: uppercase;
+                    line-height: 25px;
+                    border-radius: 3px;
+                    }
+                    nav ul li a:hover{
+                        border-bottom: 2px solid white;
+                        border-radius: 0;
+                    }
+                    .active{
+                    background-color:white;
+                    color:black;
+                    }
                 }
-                .btn-fb{
-                    background-image:url('../../dist/img/media/FB.png');
-                }
-                .btn-ok{
-                    background-image:url('../../dist/img/media/OK.png');
-                }
-                .btn-wp{
-                    background-image:url('../../dist/img/media/WA.png');
-                }
-                .btn-vk:hover{
-                    background-image:url('../../dist/img/media/on/BK.png');
-                }
-                .btn-fb:hover{
-                    background-image:url('../../dist/img/media/on/FB.png');
-                }
-                .btn-ok:hover{
-                    background-image:url('../../dist/img/media/on/OK.png');
-                }
-                .btn-wp:hover{
-                    background-image:url('../../dist/img/media/on/WA.png');
+                .media{
+                    flex-basis: 12%;
+
+                    display: flex;
+                    justify-content: space-between;
+                    margin-right: 50px;
+                    .btn-media{
+                        border-radius: 5px;
+                        height: 40px; 
+                        width: 40px;
+                        background-size: 100%;
+                        background-color: transparent;
+                        background-repeat:no-repeat;
+                        border:none;
+                        line-height:50px;
+                    }
+                    .btn-vk{
+                        background-image:url('../../dist/img/media/BK.png');
+                    }
+                    .btn-fb{
+                        background-image:url('../../dist/img/media/FB.png');
+                    }
+                    .btn-ok{
+                        background-image:url('../../dist/img/media/OK.png');
+                    }
+                    .btn-wp{
+                        background-image:url('../../dist/img/media/WA.png');
+                    }
+                    .btn-vk:hover{
+                        background-image:url('../../dist/img/media/on/BK.png');
+                    }
+                    .btn-fb:hover{
+                        background-image:url('../../dist/img/media/on/FB.png');
+                    }
+                    .btn-ok:hover{
+                        background-image:url('../../dist/img/media/on/OK.png');
+                    }
+                    .btn-wp:hover{
+                        background-image:url('../../dist/img/media/on/WA.png');
+                    }
                 }
             }
         }
