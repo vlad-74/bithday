@@ -3,331 +3,178 @@
 }
 
 @media (min-width: 1050px) and (max-width: 1199px) {
-    .content-1 .container-content-1 .content-1-txt h1 {
-        font-size: 50px;
-    }
-    .content-1 .container-content-1 .content-1-txt {
-        width: 60%;
-    }
-    .content-2 .container-content-2 .content-f .movi {
-        height: 500px;
-    }
+    .content-1 .container-content-1 .content-1-txt h1 {font-size: 50px; }
+    .content-1 .container-content-1 .content-1-txt { width: 60%; }
+    .content-2 .container-content-2 .content-f .movi { height: 500px; }
 }
 
-
 @media (min-width: 950px) and (max-width: 1049px) {
-    .header__menu .container-header2 .center #disbl {
-        display: block;
-    }
-    .top-menu{
-        display: none;
-    }
+    .header__menu .container-header2 .center #disbl { display: block; }
+    .top-menu{display: none;}
 }
 
 
 @media (min-width: 880px) and (max-width: 1049px) {
-    .header__menu .container-header2 .center #disbl {
-        display: block;
-    }
-    .top-menu{
-        display: none;
-    }
-    .content-1 .container-content-1 .content-1-txt h1 {
-        font-size: 50px;
-    }
-    .content-1 .container-content-1 .content-1-txt {
-        width: 70%;
-    }
-    .content-2 .container-content-2 .content-f .movi {
-        height: 400px;
-    }
+    .header__menu .container-header2 .center #disbl { display: block; }
+    .top-menu{ display: none; }
+    .content-1 .container-content-1 .content-1-txt h1 {font-size: 50px;}
+    .content-1 .container-content-1 .content-1-txt {width: 70%;}
+    .content-2 .container-content-2 .content-f .movi {height: 400px;}
     .content-2 .container-content-2 .content-f .text-2__left h2, .content-5 .container-content-5 h2 {
         font-size: 40px;
     }
-
-    .content-2 .container-content-2 .content-f .text-2__right h3 {
-        font-size: 20px;
-    }
-    .content-3 .container-content-3 h2{
-        font-size: 40px;
-    }
-    .content-4 .container-content-4 h2 {
-        font-size: 40px;
-    }
-    .content-4 .container-content-4 #red {
-        top: -5%;
-    }
-    .content-5 .container-content-5 #start {
-        width: 25%;
-        top: 45%;
-    }
+    .content-2 .container-content-2 .content-f .text-2__right h3 {font-size: 20px;}
+    .content-3 .container-content-3 h2{font-size: 40px;}
+    .content-4 .container-content-4 h2 {font-size: 40px;}
+    .content-4 .container-content-4 #red {top: -5%;}
+    .content-5 .container-content-5 #start {width: 25%; top: 45%; }
     .content-5 .container-content-5 .content-5-text h3{display: none;}
-
+    #footer2{display: block;}
+    .footer{display: none;}
 }
 
 @media (min-width: 725px) and (max-width: 879px) {
-    .header__menu .container-header2 .center #disbl {
-        display: block;
-    }
-    .top-menu{
-        display: none;
-    }
-    .content-1 .container-content-1 .content-1-txt h1 {
-        font-size: 50px;
-    }
-    .content-1 .container-content-1 .content-1-txt {
-        width: 80%;
-    }
-    .content-2 .container-content-2 .content-f .movi {
-        height: 300px;
-    }
-    .content-2 .container-content-2 .content-f .text-2__left h2 {
-        font-size: 40px;
-    }
-
-    .content-2 .container-content-2 .content-f .text-2__right h3 {
-        font-size: 20px;
-    }
-    .content-3 .container-content-3 h2{
-        font-size: 40px;
-    }
-    .content-4 .container-content-4 h2, .content-5 .container-content-5 h2{
-        font-size: 40px;
-    }
-    .content-4 .container-content-4 #red {
-        top: -5%;
-    }
-    .content-4 .container-content-4 .content-4-text h3 {
-       font-size: 20px; 
-    }
-    .content-4 .container-content-4 .div-href #get {
-        font-size: 20px; 
-    }
-    .content-5 .container-content-5 #start {
-        width: 22%;
-        top: 40%;
-    }
+    .header__menu .container-header2 .center #disbl { display: block;}
+    .top-menu {display: none;}
+    .content-1 .container-content-1 .content-1-txt h1 {font-size: 50px;}
+    .content-1 .container-content-1 .content-1-txt {width: 80%;}
+    .content-2 .container-content-2 .content-f .movi {height: 300px;}
+    .content-2 .container-content-2 .content-f .text-2__left h2 {font-size: 40px;}
+    .content-2 .container-content-2 .content-f .text-2__right h3 {font-size: 20px;}
+    .content-2 .container-content-2 .content-f #smile {top: 17%}
+    .content-3 .container-content-3 h2{font-size: 40px;}
+    .content-4 .container-content-4 h2, .content-5 .container-content-5 h2{font-size: 40px;}
+    .content-4 .container-content-4 #red {top: -5%;}
+    .content-4 .container-content-4 .content-4-text h3 {font-size: 20px;}
+    .content-4 .container-content-4 .div-href #get {font-size: 20px;}
+    .content-5 .container-content-5 {height: 400px;}
+    .content-5 .container-content-5 #start {width: 22%; top: 50%; }
     .content-5 .container-content-5 .content-5-text h3{display: none;}
+    #footer2{display: block;}
+    .footer{display: none;}
 }
 
 @media (min-width: 620px) and (max-width: 724px) {
-    .header__menu .container-header2 .center #disbl {
-        display: block;
-    }
-    .top-menu{
-        display: none;
-    }
-    .content-1 .container-content-1 .content-1-txt h1 {
-        font-size: 40px;
-    }
-    .content-1 .container-content-1 .content-1-txt {
-        width: 80%;
-    }
-    .content-2 .container-content-2 .content-f .movi {
-        // width: 45%;
-        height: 250px;
-    }
-    .content-2 .container-content-2 .content-f .text-2__left h2 {
-        font-size: 30px;
-    }
-
-    .content-2 .container-content-2 .content-f .text-2__right h3 {
-        font-size: 15px;
-    }
-    .content-3 .container-content-3 h2{
-        font-size: 30px;
-    }
-    .content-4 .container-content-4 h2, .content-5 .container-content-5 h2{
-        font-size: 30px;
-    }
-    .content-4 .container-content-4 #red {
-        top: -5%;
-    }
-    .content-4 .container-content-4 .content-4-text h3{
-       font-size: 15px; 
-    }
-    .content-4 .container-content-4 .div-href #get {
-        font-size: 17px; 
-    }
-    .content-5 .container-content-5 #start {
-        width: 22%;
-        top: 35%;
-    }
+    .header__menu .container-header2 .center #disbl {display: block;}
+    .top-menu {display: none;}
+    .content-1 .container-content-1 .content-1-txt h1 {font-size: 40px;}
+    .content-1 .container-content-1 .content-1-txt {width: 80%;}
+    .content-2 .container-content-2 .content-f .movi {height: 250px;}
+    .content-2 .container-content-2 .content-f .text-2__left h2 {font-size: 30px;}
+    .content-2 .container-content-2 .content-f .text-2__right h3 {font-size: 15px;}
+     .content-2 .container-content-2 .content-f #smile {top: 5%}
+    .content-3 .container-content-3 h2 {font-size: 30px;}
+    .content-4 .container-content-4 h2, .content-5 .container-content-5 h2{font-size: 30px;}
+    .content-4 .container-content-4 #red {top: -5%;}
+    .content-4 .container-content-4 .content-4-text h3{font-size: 15px;}
+    .content-4 .container-content-4 .div-href #get {font-size: 17px;}
+    .content-5 .container-content-5 {height: 400px;}
+    .content-5 .container-content-5 #start {width: 22%; top: 45%;}
     .content-5 .container-content-5 .content-5-text h3{display: none;}
-    .content-6 .container-content-6 { padding: 90px 50px 0 50px;}
+    #frm2-txt, #sub2, .content-5 .container-content-5 #frm2-wrap form label{font-size: 12px;}
+    .content-6 .container-content-6 { padding: 90px 50px 50px 50px; height: auto;}
     .gift__txt{ font-size: 12px;}
+    #footer2{display: block;}
+    .footer{display: none;}
 }
 
 @media (min-width: 500px) and (max-width: 619px) {
-    .header__menu .container-header2 .center #disbl {
-        display: block;
-    }
-    .top-menu{
-        display: none;
-    }
-    .content-1 .container-content-1 .content-1-txt h1 {
-        font-size: 30px;
-    }
-    .content-1 .container-content-1 .content-1-txt {
-        width: 80%;
-    }
-    .content-2 .container-content-2 .content-f .movi {
-        width: 45%;
-        height: 200px;
-    }
-    .content-2 .container-content-2 .content-f .text-2__left h2 {
-        font-size: 30px;
-    }
-
-    .content-2 .container-content-2 .content-f .text-2__right h3 {
-        font-size: 15px;
-    }
-    .content-3 .container-content-3 h2{
-        font-size: 30px;
-    }
-    .content-4 .container-content-4 h2, .content-5 .container-content-5 h2{
-        font-size: 30px;
-    }
-    .content-4 .container-content-4 #red {
-        top: -5%;
-    }
-    .content-4 .container-content-4 .content-4-text h3{
-       font-size: 15px; 
-    }
-    .content-4 .container-content-4 .div-href #get {
-        font-size: 17px; 
-    }
-    .content-5 .container-content-5 #start {
-        width: 22%;
-        top: 30%;
-    }
-    .content-5 .container-content-5 #baraban {
-
-    }
+    .header__menu .container-header2 .center #disbl {display: block;}
+    .top-menu{display: none;}
+    .content-1 .container-content-1 .content-1-txt h1 {font-size: 30px;}
+    .content-1 .container-content-1 .content-1-txt {width: 80%;}
+    .content-2 .container-content-2 .content-f .movi {height: 200px;}
+    .content-2 .container-content-2 .content-f .text-2__left h2 {font-size: 30px;}
+    .content-2 .container-content-2 .content-f .text-2__right h3 {font-size: 15px;}
+    .content-2 .container-content-2 .content-f #smile {top: 5%}
+    .content-3 .container-content-3 h2{font-size: 30px;}
+    .content-4 .container-content-4 h2, .content-5 .container-content-5 h2{font-size: 30px;}
+    .content-4 .container-content-4 #red {top: -5%;}
+    .content-4 .container-content-4 .content-4-text h3{font-size: 15px;}
+    .content-4 .container-content-4 .div-href #get {font-size: 17px;}
+    .content-5 .container-content-5 {height: 350px;}
+    .content-5 .container-content-5 #start {width: 22%; top: 45%;}
+    .content-5 .container-content-5 #baraban {  }
     .content-5 .container-content-5 .content-5-text h3{display: none;}
-    .content-6 .container-content-6 { padding: 90px 50px 0 50px;}
+    #frm2-txt{display:none}
+    #sub2, .content-5 .container-content-5 #frm2-wrap form label{font-size: 12px;}
+    .content-5 .container-content-5 #frm2-wrap #sub2 {margin: 10px auto; width:70%;}
+    .content-6 .container-content-6 { padding: 30px 50px 30px 50px; height: auto;}
     .gift__txt{ font-size: 12px;}
     .content-6 .container-content-6 .gift img {width: 70px;}
+    #footer2{display: block;}
+    .footer{display: none;}
 }
 
 @media (min-width: 400px) and (max-width: 499px) {
-    .header__menu .container-header2 .center #disbl {
-        display: block;
-    }
-    .top-menu{
-        display: none;
-    }
-    .content-1 .container-content-1 .content-1-txt h1 {
-        font-size: 20px;
-    }
-    .content-1 .container-content-1 .content-1-txt {
-        width: 80%;
-    }
-    .content-2 .container-content-2 .content-f .movi {
-        // width: 45%;
-        height: 200px;
-    }
-    .content-2 .container-content-2 .content-f .text-2__left h2 {
-        font-size: 20px;
-    }
-
-    .content-2 .container-content-2 .content-f .text-2__right h3 {
-        font-size: 10px;
-    }
-    .content-2 .container-content-2 .content-f .text-2 {
-        padding: 10px 0 5px 0; 
-    }
-    .content-3 .container-content-3 h2{
-        font-size: 20px;
-    }
-    .content-4 .container-content-4 h2, .content-5 .container-content-5 h2{
-        font-size: 20px;
-    }
-    .content-4 .container-content-4 #red {
-        top: -5%;
-    }
-    .content-4 .container-content-4 .content-4-text h3, .content-5 .container-content-5 .content-5-text h3{
-       font-size: 10px; 
-    }
-    .content-4 .container-content-4 .div-href #get {
-        font-size: 12px; 
-    }
-    .content-5 .container-content-5 #start {
-        width: 22%;
-        top: 50%;
-        left: 40%;
-    }
-    .content-5 .container-content-5 #baraban {
-       top: 25%;
-       left: 55%;
-    }
-    .content-5 .container-content-5 {
-        height: 363px;
-    }
-    .content-6 .container-content-6 { padding: 90px 50px 0 50px;}
+    .header__menu .container-header2 .center #disbl {display: none;}
+    .top-menu{display: none;}
+    .content-1 .container-content-1 .content-1-txt h1 {font-size: 20px;}
+    .content-1 .container-content-1 .content-1-txt {width: 80%;}
+    .content-2 .container-content-2 .content-f .movi {height: 200px;}
+    .content-2 .container-content-2 .content-f .text-2__left h2 {font-size: 20px;}
+    .content-2 .container-content-2 .content-f .text-2__right h3 {font-size: 10px;}
+    .content-2 .container-content-2 .content-f #smile {top: 5%}
+    .content-2 .container-content-2 .content-f .text-2 {padding: 10px 0 5px 0;}
+    .content-3 .container-content-3 h2{font-size: 20px;}
+    .content-4 .container-content-4 {height:400px;}
+    .content-4 .container-content-4 .content-4-text{display:none}
+    .content-4 .container-content-4 h2, .content-5 .container-content-5 h2{font-size: 20px;}
+    .content-4 .container-content-4 #red {top: -5%;}
+    .content-4 .container-content-4 .content-4-text h3{font-size: 10px;}
+    .content-4 .container-content-4 .div-href #get {font-size: 12px}
+    .content-4 .container-content-4 .div-href {top: 25%}
+    .content-5 .container-content-5 {height: 300px;}
+    .content-5 .container-content-5 #start {width: 22%; top: 53%; left: 30%;}
+    .content-5 .container-content-5 #baraban {top: 25%; left: 45%;}
+    .content-5 .container-content-5 .content-5-text h3{display: none;}
+    .content-5 .container-content-5 {height: 300px; }
+    #frm2-txt{display:none}
+    #sub2, .content-5 .container-content-5 #frm2-wrap form label{font-size: 12px;}
+    .content-5 .container-content-5 #frm2-wrap #sub2 {margin: 10px auto; width:70%;}
+    .content-6 .container-content-6 { padding: 30px 50px 30px 50px; height: auto;}
     .gift__txt{ font-size: 10px;}
     .content-6 .container-content-6 .gift img {width: 50px;}
     .content-3 {display:none;}
+     #footer2{display: block; font-size: 12px;}
+    .footer{display: none;}
 }
 @media (min-width: 400px) and (max-width: 470px) {
-    .content-5 .container-content-5 #start {
-        width: 22%;
-        top: 48%;
-        left: 40%;
-    }
+    .content-5 .container-content-5 #start {width: 22%; top: 53%; left: 30%;}
+    .header__menu .container-header2 .center #disbl {display: none;}
+    .content-6 {display:none;}
 }
 
 @media (min-width: 300px) and (max-width: 399px) {
-    .header__menu .container-header2 .center #disbl {
-        display: block;
-    }
-    .top-menu{
-        display: none;
-    }
-    .content-1 .container-content-1 .content-1-txt h1 {
-        font-size: 20px;
-    }
-    .content-1 .container-content-1 .content-1-txt {
-        width: 80%;
-    }
-    .content-2 .container-content-2 .content-f .movi {
-        // width: 45%;
-        height: 200px;
-    }
-    .content-2 .container-content-2 .content-f .text-2__left h2 {
-        font-size: 20px;
-    }
-
-    .content-2 .container-content-2 .content-f .text-2__right h3 {
-        font-size: 10px;
-    }
-    .content-2 .container-content-2 .content-f .text-2 {
-        padding: 10px 0 5px 0; 
-    }
-    .content-3 .container-content-3 h2{
-        font-size: 20px;
-    }
-    .content-4 .container-content-4 h2, .content-5 .container-content-5 h2{
-        font-size: 20px;
-    }
-    .content-4 .container-content-4 #red {
-        top: -5%;
-    }
-    .content-4 .container-content-4 .content-4-text h3, .content-5 .container-content-5 .content-5-text h3{
-       font-size: 10px; 
-    }
-    .content-4 .container-content-4 .div-href #get {
-        font-size: 12px; 
-    }
-    .content-5 .container-content-5 {
-        height: 363px;
-    }
+    .header__menu .container-header2 .center #disbl {display: none;}
+    .top-menu{display: none;}
+    .content-1 .container-content-1 .content-1-txt h1 {font-size: 20px;}
+    .content-1 .container-content-1 .content-1-txt {width: 80%;}
+    .content-2 .container-content-2 .content-f .movi {height: 200px;}
+    .content-2 .container-content-2 .content-f .text-2__left h2 {font-size: 20px;}
+    .content-2 .container-content-2 .content-f .text-2__right h3 {font-size: 10px;}
+    .content-2 .container-content-2 .content-f #smile {top: 12%}
+    .content-2 .container-content-2 .content-f .text-2 {padding: 10px 0 5px 0;}
+    .content-3 .container-content-3 h2{font-size: 20px;}
+    .content-4 .container-content-4 {height:400px;}
+    .content-4 .container-content-4 .content-4-text{display:none}
+    .content-4 .container-content-4 h2, .content-5 .container-content-5 h2{font-size: 20px;}
+    .content-4 .container-content-4 #red {top: -5%;}
+    .content-4 .container-content-4 .content-4-text h3{font-size: 10px;}
+    .content-4 .container-content-4 .div-href #get {font-size: 12px}
+    .content-4 .container-content-4 .video-hero{left: 0; margin: auto}
+    .content-4 .container-content-4 .div-href {top: 25%}
+    .content-5 .container-content-5 {height: 363px;}
     .content-5 .container-content-5 .content-5-text h3{display: none;}
-    .content-5 .container-content-5 #baraban {
-       top: 36%;
-    }
-    .content-6 .container-content-6 { padding: 90px 50px 0 50px;}
+    .content-5 .container-content-5 #baraban {top: 36%;}
+    #frm2-txt{display:none}
+    #sub2, .content-5 .container-content-5 #frm2-wrap form label{font-size: 12px;}
+    .content-5 .container-content-5 #frm2-wrap #sub2{margin: 10px auto; width:70%;}
+    .content-6 {display:none;}
+    .content-6 .container-content-6 { padding: 30px 50px 30px 50px; height: auto;}
     .gift__txt{ font-size: 10px;}
     .content-6 .container-content-6 .gift img {width: 50px;}
+    #footer2{display: block; font-size: 10px;}
+    .footer{display: none;}
     .content-3 {display:none;}
 }

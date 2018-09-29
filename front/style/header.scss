@@ -47,13 +47,19 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            
+            width:100%;
             .center{
                 display: flex;
                 margin: 20px 0;
+                width:100%;
                 .logo{
                     margin-left: 50px;
                     flex-basis: 28%;
+                    margin-right: 5px;
+                    width:100%;
+                    img{
+                        width:50%;
+                    }
                 }
                 #disbl{
                     display: none;
@@ -74,7 +80,7 @@
                     margin: auto;
                     flex-basis: 60%;
                     position: relative;
-
+                    width:100%;
                     .navecation{
                         position: absolute;
                         right: 10px;
@@ -105,10 +111,12 @@
                 }
                 .media{
                     flex-basis: 12%;
-
+                    width:100%;
                     display: flex;
                     justify-content: space-between;
                     margin-right: 50px;
+                    margin-left: 5px;
+                    padding-top: 7px;
                     .btn-media{
                         border-radius: 5px;
                         height: 40px; 
