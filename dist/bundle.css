@@ -93,7 +93,7 @@
           justify-content: space-between;
           margin-right: 50px;
           margin-left: 5px;
-          padding-top: 7px; }
+          padding-top: 3px; }
           .header__menu .container-header2 .center .media .btn-media {
             border-radius: 5px;
             height: 40px;
@@ -330,7 +330,7 @@
     margin: 50px 0;
     position: absolute;
     left: 10%;
-    top: 35%; }
+    top: 30%; }
     .content-4 .container-content-4 .div-href #get {
       width: 300px;
       height: 30px;
@@ -453,7 +453,7 @@
   border: 1px solid red !important; }
 
 .demo-video-wrapper {
-  height: 50%; }
+  height: 75%; }
 
 /* Video overlay and content */
 .video-overlay {
