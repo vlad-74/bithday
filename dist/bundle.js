@@ -210,6 +210,22 @@
 
 	    // console.log(document.getElementsByTagName("iframe")); //keydown load wheel
 
+	    document.getElementsByClassName('btn-vk')[0].addEventListener("click", function (ev) {
+	        alert('11111113333');
+	    });
+	    document.getElementsByClassName('btn-fb')[0].addEventListener("click", function (ev) {
+	        alert('11111113333');
+	    });
+	    document.getElementsByClassName('btn-ok')[0].addEventListener("click", function (ev) {
+	        alert('11111113333');
+	    });
+	    document.getElementsByClassName('btn-wp')[0].addEventListener("click", function (ev) {
+	        alert('11111113333');
+	    });
+	    document.getElementById("get").addEventListener("click", function (ev) {
+	        alert('11111113333');
+	    });
+
 	    document.getElementById("movi-big1").addEventListener("click", function (ev) {
 	        document.getElementsByTagName("iframe")[0].src = "https://www.youtube.com/embed/9prl82wE9xo";
 	    });
