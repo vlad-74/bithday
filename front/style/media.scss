@@ -27,6 +27,7 @@
     .content-3 .container-content-3 h2{font-size: 40px;}
     .content-4 .container-content-4 h2 {font-size: 40px;}
     .content-4 .container-content-4 #red {top: -5%;}
+    .wrap-video{ width: 120%; }
     .content-5 .container-content-5 #start {width: 25%; top: 45%; }
     .content-5 .container-content-5 .content-5-text h3{display: none;}
     #footer2{display: block;}
@@ -45,6 +46,7 @@
     .content-3 .container-content-3 h2{font-size: 40px;}
     .content-4 .container-content-4 h2, .content-5 .container-content-5 h2{font-size: 40px;}
     .content-4 .container-content-4 #red {top: -5%;}
+    .wrap-video{ width: 100%;} 
     .content-4 .container-content-4 .content-4-text h3 {font-size: 20px;}
     .content-4 .container-content-4 .div-href #get {font-size: 20px;}
     .content-5 .container-content-5 {height: 400px;}
@@ -66,6 +68,7 @@
     .content-3 .container-content-3 h2 {font-size: 30px;}
     .content-4 .container-content-4 h2, .content-5 .container-content-5 h2{font-size: 30px;}
     .content-4 .container-content-4 #red {top: -5%;}
+    .wrap-video{ width: 100%; }
     .content-4 .container-content-4 .content-4-text h3{font-size: 15px;}
     .content-4 .container-content-4 .div-href #get {font-size: 17px;}
     .content-5 .container-content-5 {height: 400px;}
@@ -104,6 +107,12 @@
     .content-6 .container-content-6 .gift img {width: 70px;}
     #footer2{display: block;}
     .footer{display: none;}
+    .content-4 .container-content-4 .wrap-video #bg-video{
+        width: 100%;
+        position: absolute;
+        top: 59%;
+        left: 2%;
+    }
 }
 
 @media (min-width: 400px) and (max-width: 499px) {
@@ -138,11 +147,23 @@
     .content-3 {display:none;}
      #footer2{display: block; font-size: 12px;}
     .footer{display: none;}
+    .content-4 .container-content-4 .wrap-video #bg-video{
+        width: 100%;
+        position: absolute;
+        top: 59%;
+        left: 2%;
+    }
 }
 @media (min-width: 400px) and (max-width: 470px) {
     .content-5 .container-content-5 #start {width: 22%; top: 53%; left: 30%;}
     .header__menu .container-header2 .center #disbl {display: none;}
     .content-6 {display:none;}
+    .content-4 .container-content-4 .wrap-video #bg-video{
+        width: 110%;
+        position: absolute;
+        top: 59%;
+        left: 2%;
+    }
 }
 
 @media (min-width: 300px) and (max-width: 399px) {
@@ -177,4 +198,10 @@
     #footer2{display: block; font-size: 10px;}
     .footer{display: none;}
     .content-3 {display:none;}
+    .content-4 .container-content-4 .wrap-video #bg-video{
+        width: 110%;
+        position: absolute;
+        top: 59%;
+        left: 2%;
+    }
 }
