@@ -57,7 +57,7 @@
 
 	__webpack_require__(2);
 
-	var _lodash = __webpack_require__(15);
+	var _lodash = __webpack_require__(18);
 
 	var _lodash2 = _interopRequireDefault(_lodash);
 
@@ -209,7 +209,6 @@
 
 	    checkUser();
 
-	    // console.log(document.getElementsByTagName("iframe")); //keydown load wheel
 	    document.getElementById("movi-big0").addEventListener("click", function (ev) {
 	        document.getElementsByTagName("iframe")[0].src += "?autoplay=1";
 	        document.getElementById("movi-big0").style.display = "none";
@@ -389,7 +388,7 @@
 
 /***/ }),
 
-/***/ 15:
+/***/ 18:
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(module, global) {/**
@@ -12744,11 +12743,11 @@
 	  }
 	}.call(this));
 
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(16)(module), (function() { return this; }())))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(19)(module), (function() { return this; }())))
 
 /***/ }),
 
-/***/ 16:
+/***/ 19:
 /***/ (function(module, exports) {
 
 	module.exports = function(module) {
