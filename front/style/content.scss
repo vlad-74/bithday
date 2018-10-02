@@ -92,42 +92,60 @@
         margin: 0 auto;
         padding: 5px;
         &__big{
-          height: 70%;
+          height: 68%;
           margin: 0 auto;
+          position: relative;
           iframe{
             width: 100%;
             height: 100%;
             z-index: 1;
           }
+          #movi-big0{
+            z-index: 999;
+            width: 100%;
+            height: 100%;
+            background-size: 100%;
+            background-repeat:no-repeat;
+            background-image:url('../../dist/img/youtube/screen1_icon.png');
+            position: absolute;
+          }
         }
         &__more{
           display: flex;
+          justify-content: space-between;
           height: 30%;
           position: relative;
+          margin: 10px 0 0 0;
           iframe{
             width: 33%;
             // height: 100%;
           }
           #movi-big1{
             z-index: 999;
-            width: 33%;
+            width: 32%;
             height: 100%;
-            background:transparent;
+            background-size: 100%;
+            background-repeat:no-repeat;
+            background-image:url('../../dist/img/youtube/screen1.png');
             position: absolute;
           }
           #movi-big2{
             z-index: 999;
-            width: 33%;
+            width: 32%;
             height: 100%;
-            background:transparent;
+            background-size: 100%;
+            background-repeat:no-repeat;
+            background-image:url('../../dist/img/youtube/screen2.png');
             position: absolute;
             left: 33%;
           }
           #movi-big3{
             z-index: 999;
-            width: 33%;
+            width: 32%;
             height: 100%;
-            background:transparent;
+            background-size: 100%;
+            background-repeat:no-repeat;
+            background-image:url('../../dist/img/youtube/screen3.png');
             position: absolute;
             left: 66%;
           }
