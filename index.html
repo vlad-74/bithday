@@ -7,6 +7,7 @@
 
 <link rel="stylesheet" type="text/css" href="./dist/reset.css">
 <link rel="stylesheet" type="text/css" href="./dist/bundle.css">
+<script src="http://www.youtube.com/player_api"></script>
 
 <style>
     @font-face {
@@ -192,12 +193,13 @@
                 </div>
 
                 <div class="wrap-video">
-                    <iframe id="bg-video"
-                        src="https://www.youtube.com/embed/poYfI3XA4xU?autoplay=1&playlist=poYfI3XA4xU&loop=1&controls=0&showinfo=0" 
+                    <div id="bg-video" style="width: 640px; height: 360px;"></div>
+                    <!-- <iframe id="bg-video"
+                        src="https://www.youtube.com/embed/poYfI3XA4xU?autoplay=1&playlist=poYfI3XA4xU&loop=1&controls=0&showinfo=0&sound=0" 
                         frameborder="0" height="50%" width="100%"
                         allow="autoplay; loop; encrypted-media"
                         allowfullscreen>
-                    </iframe>
+                    </iframe> -->
                 </div>    
             </div>
         </div>
@@ -291,9 +293,43 @@
             </div>
         </div>
         <div id="footer2">&#9400;Актион группа Главбух, Медиагруппа Актион-МЦФР, 2007-2018</div>
+        <!-- <div id="player" style="width: 640px; height: 360px;"></div> -->
     <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
     <script src="./dist/jquery-rotate.js" type="text/javascript"></script>
     <script type="text/javascript" src="https://rawgit.com/BGStock/jquery-background-video/master/jquery.background-video.js" charset="utf-8"></script>
+    
+    <script>
+        var player;
+
+        function onYouTubePlayerAPIReady() {
+            player = new YT.Player('bg-video', {
+                playerVars: {
+                    'autoplay': 1,
+                    'controls': 0,
+                    'autohide': 1,
+                    'wmode': 'opaque',
+                    'showinfo': 0,
+                    'loop': 1,
+                    'mute': 1,
+                    //'start': 15,
+                    //'end': 110,
+                    'playlist': 'poYfI3XA4xU'
+                },
+                videoId: 'poYfI3XA4xU',
+                events: {
+                    'onReady': onPlayerReady
+                }
+            });
+
+        }
+
+        function onPlayerReady(event) {
+            if (event){player.mute();}
+        }
+
+        onYouTubePlayerAPIReady();
+    </script>
+    
     <script type="text/javascript" src="./dist/bundle.js" charset="utf-8"></script>
 </body>
 </html>

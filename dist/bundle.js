@@ -205,9 +205,13 @@
 	document.addEventListener("DOMContentLoaded", function () {
 	    //Аналог $(document).ready(function(){
 
+	    onPlayerReady();
 	    viewComments();
 
 	    checkUser();
+
+	    // var video = document.getElementById("bg-video");
+	    // video.volume = 0;
 
 	    document.getElementById("movi-big0").addEventListener("click", function (ev) {
 	        document.getElementsByTagName("iframe")[0].src += "?autoplay=1";
