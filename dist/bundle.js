@@ -238,6 +238,16 @@
 	    }
 
 	    function gotoContent(id) {
+	        if (id === 1) {
+	            currNum = 1;
+	        } else if (id === 2) {
+	            currNum = 3;
+	        } else if (id === 3) {
+	            currNum = 5;
+	        } else if (id === 4) {
+	            currNum = 6;
+	        }
+
 	        setTimeout(function () {
 	            if (id !== 4) {
 	                window.scrollTo(0, document.documentElement.scrollTop - 137);
