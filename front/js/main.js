@@ -168,16 +168,12 @@ function validForm(item) {
     }
 }
 
-
 document.addEventListener("DOMContentLoaded", function() {//Аналог $(document).ready(function(){
 
     onPlayerReady();
     viewComments();
 
     checkUser();
-
-    // var video = document.getElementById("bg-video");
-    // video.volume = 0;
 
     document.getElementById("movi-big0").addEventListener("click", function (ev) {
         document.getElementsByTagName("iframe")[0].src += "?autoplay=1";
@@ -207,6 +203,72 @@ document.addEventListener("DOMContentLoaded", function() {//Аналог $(docum
         });
     }
 
+
+    function gotoContent(id) {
+        setTimeout(() => {
+            if (id !== 4) {
+                window.scrollTo(0, document.documentElement.scrollTop - 137);
+            }
+        }, 0);
+    }
+
+    for (let i = 0; i < document.getElementsByClassName("menu").length; i++) {
+        document.getElementsByClassName("menu")[i].addEventListener("click", function (ev) {
+            gotoContent(i+1);
+        });
+    }
+
+    var currContent = '';
+    function gotoContentWheel(content){
+        
+        if (currContent !== content){
+            $([document.documentElement, document.body]).animate({
+                scrollTop: $(content).offset().top - 137
+            }, 300);
+            currContent = content;
+            console.log("content", content);
+        }
+    }
+
+    var currNum = 0;
+
+    function logicContentWheel(bool){
+        const arrContent = [
+            {currNum: 0, content:"c1"},
+            {currNum: 1, content: "c2" },
+            {currNum: 2, content: "c3" }, 
+            {currNum: 3, content: "c4" }, 
+            {currNum: 4, content: "c5" }, 
+            {currNum: 5, content: "c6" }, 
+            {currNum: 6, content: "c7" }, 
+        ];
+        if (bool){
+            if (currNum < 5) { currNum = currNum + 1; }
+            gotoContentWheel('#' + arrContent.find(item => item.currNum === currNum).content);
+        } else {
+            if (currNum > 0) { currNum = currNum - 1; }
+            gotoContentWheel('#' + arrContent.find(item => item.currNum === currNum).content);  
+        }
+    }
+
+    function onWheel(ev){
+        let e = e || window.event;
+        let delta = e.deltaY || e.detail || e.wheelDelta;
+
+        if (delta > 0) {
+            logicContentWheel(true);
+        } else {
+            logicContentWheel(false);
+        }
+        e.preventDefault ? e.preventDefault() : (e.returnValue = false);
+    }
+    
+    for (let i = 0; i < document.getElementsByClassName("mousewheel").length; i++) {
+        document.getElementsByClassName("mousewheel")[i].addEventListener("wheel", function (ev) {
+            onWheel(ev);
+        });
+    }
+
     document.getElementById("sub").addEventListener('click', function (ev) {
         validForm(0);
     });
@@ -218,7 +280,7 @@ document.addEventListener("DOMContentLoaded", function() {//Аналог $(docum
     document.getElementById("exit").addEventListener("click", function(ev) {
         document.getElementById("frm2-wrap").style.display = "none";
     });
-
+    
 
     $('ul li a').click(function () {
         $('li a').removeClass("active");

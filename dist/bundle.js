@@ -210,9 +210,6 @@
 
 	    checkUser();
 
-	    // var video = document.getElementById("bg-video");
-	    // video.volume = 0;
-
 	    document.getElementById("movi-big0").addEventListener("click", function (ev) {
 	        document.getElementsByTagName("iframe")[0].src += "?autoplay=1";
 	        document.getElementById("movi-big0").style.display = "none";
@@ -237,6 +234,75 @@
 	    for (var i = 0; i < document.getElementsByClassName("error-clean").length; i++) {
 	        document.getElementsByClassName("error-clean")[i].addEventListener("keydown", function (ev) {
 	            cleanError(ev);
+	        });
+	    }
+
+	    function gotoContent(id) {
+	        setTimeout(function () {
+	            if (id !== 4) {
+	                window.scrollTo(0, document.documentElement.scrollTop - 137);
+	            }
+	        }, 0);
+	    }
+
+	    var _loop = function (i) {
+	        document.getElementsByClassName("menu")[i].addEventListener("click", function (ev) {
+	            gotoContent(i + 1);
+	        });
+	    };
+
+	    for (var i = 0; i < document.getElementsByClassName("menu").length; i++) {
+	        _loop(i);
+	    }
+
+	    var currContent = '';
+	    function gotoContentWheel(content) {
+
+	        if (currContent !== content) {
+	            $([document.documentElement, document.body]).animate({
+	                scrollTop: $(content).offset().top - 137
+	            }, 300);
+	            currContent = content;
+	            console.log("content", content);
+	        }
+	    }
+
+	    var currNum = 0;
+
+	    function logicContentWheel(bool) {
+	        var arrContent = [{ currNum: 0, content: "c1" }, { currNum: 1, content: "c2" }, { currNum: 2, content: "c3" }, { currNum: 3, content: "c4" }, { currNum: 4, content: "c5" }, { currNum: 5, content: "c6" }, { currNum: 6, content: "c7" }];
+	        if (bool) {
+	            if (currNum < 5) {
+	                currNum = currNum + 1;
+	            }
+	            gotoContentWheel('#' + arrContent.find(function (item) {
+	                return item.currNum === currNum;
+	            }).content);
+	        } else {
+	            if (currNum > 0) {
+	                currNum = currNum - 1;
+	            }
+	            gotoContentWheel('#' + arrContent.find(function (item) {
+	                return item.currNum === currNum;
+	            }).content);
+	        }
+	    }
+
+	    function onWheel(ev) {
+	        var e = e || window.event;
+	        var delta = e.deltaY || e.detail || e.wheelDelta;
+
+	        if (delta > 0) {
+	            logicContentWheel(true);
+	        } else {
+	            logicContentWheel(false);
+	        }
+	        e.preventDefault ? e.preventDefault() : e.returnValue = false;
+	    }
+
+	    for (var i = 0; i < document.getElementsByClassName("mousewheel").length; i++) {
+	        document.getElementsByClassName("mousewheel")[i].addEventListener("wheel", function (ev) {
+	            onWheel(ev);
 	        });
 	    }
 
