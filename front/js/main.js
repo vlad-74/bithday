@@ -195,7 +195,6 @@ document.addEventListener("DOMContentLoaded", function() {//Аналог $(docum
     }
 
     function getPositions(){
-
         const arrCont = ["c1", "c2", "c3", "c4", "c5", "c6", "c7"];
         for (let i = 0; i < arrCont.length; i++) {
             let heightElement = getPosition(arrCont[i]);
@@ -204,32 +203,38 @@ document.addEventListener("DOMContentLoaded", function() {//Аналог $(docum
             if (window.scrollY > arrDiv[0] && window.scrollY < arrDiv[1]) {
                 currContent = "#" + arrCont[i];
                 currNum = arrContent.find(item => item.content === arrCont[i]).currNum;
-                console.log(window.scrollY, currContent, arrDiv);
+                // console.log(window.scrollY, currContent, arrDiv);
                 changeActiveMenu();
             }
             changeActiveMenu();
-            
+
             startPosition = heightElement + 0.000001;
         }
     }
     getPositions();
 
+    var currMovi = "9prl82wE9xo";
+
     document.getElementById("movi-big0").addEventListener("click", function (ev) {
-        document.getElementsByTagName("iframe")[0].src += "?autoplay=1";
+        // document.getElementsByTagName("iframe")[0].src += "?autoplay=1";
         document.getElementById("movi-big0").style.display = "none";
+        onYouTubePlayerAPIReady2(currMovi);
     });
 
     document.getElementById("movi-big1").addEventListener("click", function(ev) {
-        document.getElementsByTagName("iframe")[0].src = "https://www.youtube.com/embed/9prl82wE9xo";
+        currMovi = "9prl82wE9xo";
+        // document.getElementsByTagName("iframe")[0].src = "https://www.youtube.com/embed/9prl82wE9xo";
         document.getElementById("movi-big0").style.backgroundImage = "url('./dist/img/youtube/screen1_icon.png')";
         document.getElementById("movi-big0").style.display = "block";
     });
     document.getElementById("movi-big2").addEventListener("click", function (ev) {
-        document.getElementsByTagName("iframe")[0].src = "https://www.youtube.com/embed/a5uck7vTp2E"
+        currMovi = "a5uck7vTp2E";
+        // document.getElementsByTagName("iframe")[0].src = "https://www.youtube.com/embed/a5uck7vTp2E"
         document.getElementById("movi-big0").style.backgroundImage = "url('./dist/img/youtube/screen2_icon.png')";
         document.getElementById("movi-big0").style.display = "block";
     });
     document.getElementById("movi-big3").addEventListener("click", function (ev) {
+        currMovi = "5m_Hj3eVQiE";
         document.getElementsByTagName("iframe")[0].src = "https://www.youtube.com/embed/5m_Hj3eVQiE";
         document.getElementById("movi-big0").style.backgroundImage = "url('./dist/img/youtube/screen3_icon.png')";
         document.getElementById("movi-big0").style.display = "block";
@@ -344,6 +349,55 @@ document.addEventListener("DOMContentLoaded", function() {//Аналог $(docum
         rotateBaraban(720 + getRandom * 36);
         blockButton('start');
     });
+
+
+    var player2;
+    function onYouTubePlayerAPIReady2(currMovi) {
+        player2 = new YT.Player('iframe-video', {
+            playerVars: {
+                'autoplay': 1,
+                'controls': 1,
+                'autohide': 1,
+                'wmode': 'opaque',
+                'showinfo': 0,
+                'loop': 0,
+                'mute': 0,
+            },
+            videoId: currMovi,
+            events: {
+                'onReady': onPlayerReady,
+                'onStateChange': onPlayerStateChange,
+            }
+        });
+    }
+
+    function onPlayerReady(event) {
+        // if (event){player.mute();}
+    }
+
+    function onPlayerStateChange(event) {
+        switch (event.data) {
+            case YT.PlayerState.UNSTARTED:
+                console.log('unstarted');
+                break;
+            case YT.PlayerState.ENDED:
+                document.getElementById("movi-big0").style.display = "block";
+                console.log('ended');
+                break;
+            case YT.PlayerState.PLAYING:
+                console.log('playing');
+                break;
+            case YT.PlayerState.PAUSED:
+                console.log('paused');
+                break;
+            case YT.PlayerState.BUFFERING:
+                console.log('buffering');
+                break;
+            case YT.PlayerState.CUED:
+                console.log('video cued');
+                break;
+        }
+    }
 
 
 });
