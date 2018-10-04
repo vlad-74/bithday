@@ -175,6 +175,45 @@ document.addEventListener("DOMContentLoaded", function() {//Аналог $(docum
 
     checkUser();
 
+    var currContent = '';
+    var currNum = 0;
+
+    const arrContent = [
+        { currNum: 0, content: "c1" },
+        { currNum: 1, content: "c2" },
+        { currNum: 2, content: "c3" },
+        { currNum: 3, content: "c4" },
+        { currNum: 4, content: "c5" },
+        { currNum: 5, content: "c6" },
+        { currNum: 6, content: "c7" },
+    ];
+
+    var startPosition = 0;
+    function getPosition(id){
+        var element = document.getElementById(id);
+        return element.getBoundingClientRect().top + window.scrollY;
+    }
+
+    function getPositions(){
+
+        const arrCont = ["c1", "c2", "c3", "c4", "c5", "c6", "c7"];
+        for (let i = 0; i < arrCont.length; i++) {
+            let heightElement = getPosition(arrCont[i]);
+            let arrDiv = [startPosition, heightElement, arrCont[i]];
+
+            if (window.scrollY > arrDiv[0] && window.scrollY < arrDiv[1]) {
+                currContent = "#" + arrCont[i];
+                currNum = arrContent.find(item => item.content === arrCont[i]).currNum;
+                console.log(window.scrollY, currContent, arrDiv);
+                changeActiveMenu();
+            }
+            changeActiveMenu();
+            
+            startPosition = heightElement + 0.000001;
+        }
+    }
+    getPositions();
+
     document.getElementById("movi-big0").addEventListener("click", function (ev) {
         document.getElementsByTagName("iframe")[0].src += "?autoplay=1";
         document.getElementById("movi-big0").style.display = "none";
@@ -238,7 +277,6 @@ document.addEventListener("DOMContentLoaded", function() {//Аналог $(docum
         }
     }
 
-    var currContent = '';
     function gotoContentWheel(content){
         
         if (currContent !== content){
@@ -251,18 +289,9 @@ document.addEventListener("DOMContentLoaded", function() {//Аналог $(docum
         }
     }
 
-    var currNum = 0;
+    
 
     function logicContentWheel(bool){
-        const arrContent = [
-            {currNum: 0, content:"c1"},
-            {currNum: 1, content: "c2" },
-            {currNum: 2, content: "c3" }, 
-            {currNum: 3, content: "c4" }, 
-            {currNum: 4, content: "c5" }, 
-            {currNum: 5, content: "c6" }, 
-            {currNum: 6, content: "c7" }, 
-        ];
         if (bool){
             if (currNum < 5) { currNum = currNum + 1; }
             gotoContentWheel('#' + arrContent.find(item => item.currNum === currNum).content);

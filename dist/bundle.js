@@ -210,6 +210,44 @@
 
 	    checkUser();
 
+	    var currContent = '';
+	    var currNum = 0;
+
+	    var arrContent = [{ currNum: 0, content: "c1" }, { currNum: 1, content: "c2" }, { currNum: 2, content: "c3" }, { currNum: 3, content: "c4" }, { currNum: 4, content: "c5" }, { currNum: 5, content: "c6" }, { currNum: 6, content: "c7" }];
+
+	    var startPosition = 0;
+	    function getPosition(id) {
+	        var element = document.getElementById(id);
+	        return element.getBoundingClientRect().top + window.scrollY;
+	    }
+
+	    function getPositions() {
+
+	        var arrCont = ["c1", "c2", "c3", "c4", "c5", "c6", "c7"];
+
+	        var _loop = function (i) {
+	            var heightElement = getPosition(arrCont[i]);
+	            var arrDiv = [startPosition, heightElement, arrCont[i]];
+
+	            if (window.scrollY > arrDiv[0] && window.scrollY < arrDiv[1]) {
+	                currContent = "#" + arrCont[i];
+	                currNum = arrContent.find(function (item) {
+	                    return item.content === arrCont[i];
+	                }).currNum;
+	                console.log(window.scrollY, currContent, arrDiv);
+	                changeActiveMenu();
+	            }
+	            changeActiveMenu();
+
+	            startPosition = heightElement + 0.000001;
+	        };
+
+	        for (var i = 0; i < arrCont.length; i++) {
+	            _loop(i);
+	        }
+	    }
+	    getPositions();
+
 	    document.getElementById("movi-big0").addEventListener("click", function (ev) {
 	        document.getElementsByTagName("iframe")[0].src += "?autoplay=1";
 	        document.getElementById("movi-big0").style.display = "none";
@@ -255,14 +293,14 @@
 	        }, 0);
 	    }
 
-	    var _loop = function (i) {
+	    var _loop2 = function (i) {
 	        document.getElementsByClassName("menu")[i].addEventListener("click", function (ev) {
 	            gotoContent(i + 1);
 	        });
 	    };
 
 	    for (var i = 0; i < document.getElementsByClassName("menu").length; i++) {
-	        _loop(i);
+	        _loop2(i);
 	    }
 
 	    function changeActiveMenu() {
@@ -275,7 +313,6 @@
 	        }
 	    }
 
-	    var currContent = '';
 	    function gotoContentWheel(content) {
 
 	        if (currContent !== content) {
@@ -288,10 +325,7 @@
 	        }
 	    }
 
-	    var currNum = 0;
-
 	    function logicContentWheel(bool) {
-	        var arrContent = [{ currNum: 0, content: "c1" }, { currNum: 1, content: "c2" }, { currNum: 2, content: "c3" }, { currNum: 3, content: "c4" }, { currNum: 4, content: "c5" }, { currNum: 5, content: "c6" }, { currNum: 6, content: "c7" }];
 	        if (bool) {
 	            if (currNum < 5) {
 	                currNum = currNum + 1;
