@@ -228,6 +228,16 @@ document.addEventListener("DOMContentLoaded", function() {//Аналог $(docum
         });
     }
 
+    function changeActiveMenu(){
+        for (let i = 0; i < document.getElementsByClassName("menu").length; i++) {
+            let el = document.getElementsByClassName("menu")[i];
+            el.classList.remove("active");
+            if (currContent === el.getAttribute("href")){
+                document.getElementsByClassName("menu")[i].classList.add("active");
+            }
+        }
+    }
+
     var currContent = '';
     function gotoContentWheel(content){
         
@@ -237,6 +247,7 @@ document.addEventListener("DOMContentLoaded", function() {//Аналог $(docum
             }, 300);
             currContent = content;
             console.log("content", content);
+            changeActiveMenu();
         }
     }
 

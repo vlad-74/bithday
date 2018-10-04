@@ -265,6 +265,16 @@
 	        _loop(i);
 	    }
 
+	    function changeActiveMenu() {
+	        for (var i = 0; i < document.getElementsByClassName("menu").length; i++) {
+	            var el = document.getElementsByClassName("menu")[i];
+	            el.classList.remove("active");
+	            if (currContent === el.getAttribute("href")) {
+	                document.getElementsByClassName("menu")[i].classList.add("active");
+	            }
+	        }
+	    }
+
 	    var currContent = '';
 	    function gotoContentWheel(content) {
 
@@ -274,6 +284,7 @@
 	            }, 300);
 	            currContent = content;
 	            console.log("content", content);
+	            changeActiveMenu();
 	        }
 	    }
 
