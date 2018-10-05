@@ -14,10 +14,11 @@
       width: 100%;
     }
     .content-1-txt{
-      width: 50%;
+      width: 70%;
       // height: 100%;
+
       position: absolute;
-      left: 15%;
+      left: 10%;
       top: 18%;
       h1{
         font-size: 60px;
@@ -58,6 +59,7 @@
       .text-2{
         display: flex;
         padding: 40px 0 10px 0;
+        margin-bottom: 25px;
         &__left{
           flex-basis: 40%;
           h2{
@@ -71,6 +73,7 @@
           h3{
             font-size: 25px;
             font-family: "Proxima-bd", Arial, sans-serif;
+            padding-top: 10px;
           }    
         }
       }
