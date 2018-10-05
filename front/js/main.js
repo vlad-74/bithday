@@ -223,18 +223,21 @@ document.addEventListener("DOMContentLoaded", function() {//Аналог $(docum
 
     document.getElementById("movi-big1").addEventListener("click", function(ev) {
         currMovi = "9prl82wE9xo";
+        player2.destroy();
         // document.getElementsByTagName("iframe")[0].src = "https://www.youtube.com/embed/9prl82wE9xo";
         document.getElementById("movi-big0").style.backgroundImage = "url('./dist/img/youtube/screen1_icon.png')";
         document.getElementById("movi-big0").style.display = "block";
     });
     document.getElementById("movi-big2").addEventListener("click", function (ev) {
         currMovi = "a5uck7vTp2E";
+        player2.destroy();
         // document.getElementsByTagName("iframe")[0].src = "https://www.youtube.com/embed/a5uck7vTp2E"
         document.getElementById("movi-big0").style.backgroundImage = "url('./dist/img/youtube/screen2_icon.png')";
         document.getElementById("movi-big0").style.display = "block";
     });
     document.getElementById("movi-big3").addEventListener("click", function (ev) {
         currMovi = "5m_Hj3eVQiE";
+        player2.destroy();
         document.getElementsByTagName("iframe")[0].src = "https://www.youtube.com/embed/5m_Hj3eVQiE";
         document.getElementById("movi-big0").style.backgroundImage = "url('./dist/img/youtube/screen3_icon.png')";
         document.getElementById("movi-big0").style.display = "block";
@@ -382,6 +385,7 @@ document.addEventListener("DOMContentLoaded", function() {//Аналог $(docum
                 break;
             case YT.PlayerState.ENDED:
                 document.getElementById("movi-big0").style.display = "block";
+                player2.destroy();
                 console.log('ended');
                 break;
             case YT.PlayerState.PLAYING:
