@@ -247,7 +247,60 @@
 	    }
 	    getPositions();
 
+	    function onPlayerReady(event) {
+	        // if (event){player.mute();}
+	    }
+
+	    function updateBigVideo() {
+	        $("#iframe-video").remove(); // удаляем старые данные
+
+	        var m = document.createElement("div");
+	        m.id = 'iframe-video';
+
+	        document.getElementById("movi__big").appendChild(m);
+	    }
+
+	    function onPlayerStateChange(event) {
+	        switch (event.data) {
+	            case YT.PlayerState.UNSTARTED:
+	                break;
+	            case YT.PlayerState.ENDED:
+	                document.getElementById("movi-big0").style.display = "block";
+	                updateBigVideo();
+	                // player2.destroy();
+	                break;
+	            case YT.PlayerState.PLAYING:
+	                break;
+	            case YT.PlayerState.PAUSED:
+	                break;
+	            case YT.PlayerState.BUFFERING:
+	                break;
+	            case YT.PlayerState.CUED:
+	                break;
+	        }
+	    }
+
 	    var currMovi = "9prl82wE9xo";
+	    var player2;
+
+	    function onYouTubePlayerAPIReady2(currMovi) {
+	        player2 = new YT.Player('iframe-video', {
+	            playerVars: {
+	                'autoplay': 1,
+	                'controls': 1,
+	                'autohide': 1,
+	                'wmode': 'opaque',
+	                'showinfo': 0,
+	                'loop': 0,
+	                'mute': 0
+	            },
+	            videoId: currMovi,
+	            events: {
+	                'onReady': onPlayerReady,
+	                'onStateChange': onPlayerStateChange
+	            }
+	        });
+	    }
 
 	    document.getElementById("movi-big0").addEventListener("click", function (ev) {
 	        // document.getElementsByTagName("iframe")[0].src += "?autoplay=1";
@@ -258,29 +311,37 @@
 	    document.getElementById("movi-big1").addEventListener("click", function (ev) {
 	        currMovi = "9prl82wE9xo";
 	        if (player2) {
-	            player2.destroy();
+	            updateBigVideo();
+	            document.getElementById("movi-big0").style.backgroundImage = "url('./dist/img/youtube/screen1_icon.png')";
+	            document.getElementById("movi-big0").style.display = "block";
+	        } else {
+	            document.getElementById("movi-big0").style.backgroundImage = "url('./dist/img/youtube/screen1_icon.png')";
+	            document.getElementById("movi-big0").style.display = "block";
 	        }
-	        // document.getElementsByTagName("iframe")[0].src = "https://www.youtube.com/embed/9prl82wE9xo";
-	        document.getElementById("movi-big0").style.backgroundImage = "url('./dist/img/youtube/screen1_icon.png')";
-	        document.getElementById("movi-big0").style.display = "block";
 	    });
+
 	    document.getElementById("movi-big2").addEventListener("click", function (ev) {
 	        currMovi = "a5uck7vTp2E";
 	        if (player2) {
-	            player2.destroy();
+	            updateBigVideo();
+	            document.getElementById("movi-big0").style.backgroundImage = "url('./dist/img/youtube/screen2_icon.png')";
+	            document.getElementById("movi-big0").style.display = "block";
+	        } else {
+	            document.getElementById("movi-big0").style.backgroundImage = "url('./dist/img/youtube/screen2_icon.png')";
+	            document.getElementById("movi-big0").style.display = "block";
 	        }
-	        // document.getElementsByTagName("iframe")[0].src = "https://www.youtube.com/embed/a5uck7vTp2E"
-	        document.getElementById("movi-big0").style.backgroundImage = "url('./dist/img/youtube/screen2_icon.png')";
-	        document.getElementById("movi-big0").style.display = "block";
 	    });
+
 	    document.getElementById("movi-big3").addEventListener("click", function (ev) {
 	        currMovi = "5m_Hj3eVQiE";
 	        if (player2) {
-	            player2.destroy();
+	            updateBigVideo();
+	            document.getElementById("movi-big0").style.backgroundImage = "url('./dist/img/youtube/screen3_icon.png')";
+	            document.getElementById("movi-big0").style.display = "block";
+	        } else {
+	            document.getElementById("movi-big0").style.backgroundImage = "url('./dist/img/youtube/screen3_icon.png')";
+	            document.getElementById("movi-big0").style.display = "block";
 	        }
-	        document.getElementsByTagName("iframe")[0].src = "https://www.youtube.com/embed/5m_Hj3eVQiE";
-	        document.getElementById("movi-big0").style.backgroundImage = "url('./dist/img/youtube/screen3_icon.png')";
-	        document.getElementById("movi-big0").style.display = "block";
 	    });
 
 	    for (var i = 0; i < document.getElementsByClassName("error-clean").length; i++) {
@@ -392,62 +453,13 @@
 	        $(this).addClass("active");
 	    });
 
-	    $(".jquery-background-video").bgVideo({ fadeIn: 1000 });
+	    // $(".jquery-background-video").bgVideo({ fadeIn: 1000 });
 
 	    document.querySelector('#start').addEventListener('click', function (ev) {
 	        var getRandom = randomIntFromInterval(1, 10);
 	        rotateBaraban(720 + getRandom * 36);
 	        blockButton('start');
 	    });
-
-	    var player2;
-	    function onYouTubePlayerAPIReady2(currMovi) {
-	        player2 = new YT.Player('iframe-video', {
-	            playerVars: {
-	                'autoplay': 1,
-	                'controls': 1,
-	                'autohide': 1,
-	                'wmode': 'opaque',
-	                'showinfo': 0,
-	                'loop': 0,
-	                'mute': 0
-	            },
-	            videoId: currMovi,
-	            events: {
-	                'onReady': onPlayerReady,
-	                'onStateChange': onPlayerStateChange
-	            }
-	        });
-	    }
-
-	    function onPlayerReady(event) {
-	        // if (event){player.mute();}
-	    }
-
-	    function onPlayerStateChange(event) {
-	        switch (event.data) {
-	            case YT.PlayerState.UNSTARTED:
-	                console.log('unstarted');
-	                break;
-	            case YT.PlayerState.ENDED:
-	                document.getElementById("movi-big0").style.display = "block";
-	                player2.destroy();
-	                console.log('ended');
-	                break;
-	            case YT.PlayerState.PLAYING:
-	                console.log('playing');
-	                break;
-	            case YT.PlayerState.PAUSED:
-	                console.log('paused');
-	                break;
-	            case YT.PlayerState.BUFFERING:
-	                console.log('buffering');
-	                break;
-	            case YT.PlayerState.CUED:
-	                console.log('video cued');
-	                break;
-	        }
-	    }
 	});
 
 /***/ }),
