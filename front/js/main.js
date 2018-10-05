@@ -405,19 +405,33 @@ document.addEventListener("DOMContentLoaded", function() {//Аналог $(docum
     document.getElementById("exit").addEventListener("click", function(ev) {
         document.getElementById("frm2-wrap").style.display = "none";
     });
+
+    document.getElementById("toogle-menu").addEventListener("click", function (ev) {
+        document.getElementById("toogle-div").style.display = "block";
+    });
     
+    document.getElementById("exit-menu").addEventListener("click", function (ev) {
+        document.getElementById("toogle-div").style.display = "none";
+    });
+
 
     $('ul li a').click(function () {
         $('li a').removeClass("active");
         $(this).addClass("active");
     });
 
-    // $(".jquery-background-video").bgVideo({ fadeIn: 1000 });
-
     document.querySelector('#start').addEventListener('click', function (ev) {
         let getRandom = randomIntFromInterval(1,10);
         rotateBaraban(720 + getRandom * 36);
         blockButton('start');
+    });
+
+    $(window).resize(function () {
+        if ($(window).width() > 1050){
+            if (document.getElementById("toogle-div").style.display === "block"){
+                document.getElementById("toogle-div").style.display = "none";
+            }
+        };
     });
 });
 

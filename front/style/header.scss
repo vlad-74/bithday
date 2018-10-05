@@ -9,7 +9,18 @@
         .container-header{
             height: $hh-header1;
             position: relative;
-
+            display: flex;
+            #toogle-menu{
+                display:none;
+                margin-right: 5px;
+                width: 40px;
+                margin: auto;
+                margin-left:5px;
+                cursor: pointer;
+                img{
+                    width:100%;
+                }
+            }
             .right-header{
                 position: absolute;
                 right: 40px;
@@ -52,6 +63,37 @@
                 display: flex;
                 margin: 20px 0;
                 width:100%;
+                #toogle-div{
+                    display: none;
+                    position: fixed;
+                    top: 0;
+                    background-color: $bg-header1;
+                    z-index: 9999;
+                    color:white;
+                    // margin: auto
+
+                    ul li{
+                    list-style:none;
+                    padding:20px;
+                    }
+                    ul li a{
+                    text-decoration:none;
+                    color :white;
+                    // font-weight: bold;
+                    padding:5px 10px;
+                    text-transform: uppercase;
+                    line-height: 25px;
+                    border-radius: 3px;
+                    }
+                    ul li a:hover{
+                        border-bottom: 2px solid white;
+                        border-radius: 0;
+                    }
+                    .active{
+                    background-color:white;
+                    color:black;
+                    }
+                }
                 .logo{
                     margin-left: 50px;
                     flex-basis: 28%;

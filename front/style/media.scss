@@ -1,5 +1,4 @@
 @media (min-width: 1200px) and (max-width: 5000px) {
-
 }
 
 @media (min-width: 1050px) and (max-width: 1199px) {
@@ -9,13 +8,13 @@
 }
 
 @media (min-width: 950px) and (max-width: 1049px) {
-    .header__menu .container-header2 .center #disbl { display: block; }
+    .header__menu .container-header2 .center #toogle-menutoogle-menu { display: block; }
     .top-menu{display: none;}
 }
 
 
 @media (min-width: 880px) and (max-width: 1049px) {
-    .header__menu .container-header2 .center #disbl { display: block; }
+    .header__user .container-header #toogle-menu { display: block; }
     .top-menu{ display: none; }
     .content-1 .container-content-1 .content-1-txt h1 {font-size: 50px;}
     .content-1 .container-content-1 .content-1-txt {width: 70%;}
@@ -35,7 +34,7 @@
 }
 
 @media (min-width: 725px) and (max-width: 879px) {
-    .header__menu .container-header2 .center #disbl { display: block;}
+    .header__user .container-header #toogle-menu { display: block;}
     .top-menu {display: none;}
     .content-1 .container-content-1 .content-1-txt h1 {font-size: 50px;}
     .content-1 .container-content-1 .content-1-txt {width: 80%;}
@@ -57,7 +56,7 @@
 }
 
 @media (min-width: 620px) and (max-width: 724px) {
-    .header__menu .container-header2 .center #disbl {display: block;}
+    .header__user .container-header #toogle-menu {display: block;}
     .top-menu {display: none;}
     .content-1 .container-content-1 .content-1-txt h1 {font-size: 40px;}
     .content-1 .container-content-1 .content-1-txt {width: 80%;}
@@ -82,7 +81,7 @@
 }
 
 @media (min-width: 500px) and (max-width: 619px) {
-    .header__menu .container-header2 .center #disbl {display: block;}
+    .header__user .container-header #toogle-menu {display: block;}
     .top-menu{display: none;}
     .content-1 .container-content-1 .content-1-txt h1 {font-size: 30px;}
     .content-1 .container-content-1 .content-1-txt {width: 80%;}
@@ -116,7 +115,7 @@
 }
 
 @media (min-width: 400px) and (max-width: 499px) {
-    .header__menu .container-header2 .center #disbl {display: none;}
+    .header__user .container-header #toogle-menu {display: block;}
     .top-menu{display: none;}
     .content-1 .container-content-1 .content-1-txt h1 {font-size: 20px;}
     .content-1 .container-content-1 .content-1-txt {width: 80%;}
@@ -156,7 +155,7 @@
 }
 @media (min-width: 400px) and (max-width: 470px) {
     .content-5 .container-content-5 #start {width: 22%; top: 53%; left: 30%;}
-    .header__menu .container-header2 .center #disbl {display: none;}
+    .header__user .container-header #toogle-menu{display: block;}
     .content-6 {display:none;}
     .content-4 .container-content-4 .wrap-video #bg-video{
         width: 110%;
@@ -167,7 +166,7 @@
 }
 
 @media (min-width: 300px) and (max-width: 399px) {
-    .header__menu .container-header2 .center #disbl {display: none;}
+    .header__user .container-header #toogle-menu{display: block;}
     .top-menu{display: none;}
     .content-1 .container-content-1 .content-1-txt h1 {font-size: 20px;}
     .content-1 .container-content-1 .content-1-txt {width: 80%;}
