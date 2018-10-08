@@ -476,7 +476,7 @@
 	    });
 
 	    $(document).ready(function () {
-	        $("#top-menu-nav").on("click", "a", function (event) {
+	        $("#top-menu-nav, #toogle-div").on("click", "a", function (event) {
 	            //отменяем стандартную обработку нажатия по ссылке
 	            event.preventDefault();
 
