@@ -177,6 +177,8 @@ document.addEventListener("DOMContentLoaded", function() {//Аналог $(docum
 
     var currContent = '';
     var currNum = 0;
+    var onScroll = false;
+    var delay = 1500;
 
     const arrContent = [
         { currNum: 0, content: "c1" },
@@ -318,30 +320,6 @@ document.addEventListener("DOMContentLoaded", function() {//Аналог $(docum
     }
 
 
-    function gotoContent(id) {
-        if (id === 1) {
-            currNum = 1;
-        } else if (id === 2) {
-            currNum = 3;
-        } else if (id === 3) {
-            currNum = 5;
-        } else if (id === 4) {
-            currNum = 6;
-        }
-        
-        setTimeout(() => {
-            if (id !== 4) {
-                window.scrollTo(0, document.documentElement.scrollTop - 137);
-            }
-        }, 0);
-    }
-
-    for (let i = 0; i < document.getElementsByClassName("menu").length; i++) {
-        document.getElementsByClassName("menu")[i].addEventListener("click", function (ev) {
-            gotoContent(i+1);
-        });
-    }
-
     function changeActiveMenu(){
         for (let i = 0; i < document.getElementsByClassName("menu").length; i++) {
             let el = document.getElementsByClassName("menu")[i];
@@ -350,48 +328,6 @@ document.addEventListener("DOMContentLoaded", function() {//Аналог $(docum
                 document.getElementsByClassName("menu")[i].classList.add("active");
             }
         }
-    }
-
-    function gotoContentWheel(content){
-        
-        if (currContent !== content){
-            $([document.documentElement, document.body]).animate({
-                scrollTop: $(content).offset().top - 137
-            }, 300);
-            currContent = content;
-            console.log("content", content);
-            changeActiveMenu();
-        }
-    }
-
-    
-
-    function logicContentWheel(bool){
-        if (bool){
-            if (currNum < 5) { currNum = currNum + 1; }
-            gotoContentWheel('#' + arrContent.find(item => item.currNum === currNum).content);
-        } else {
-            if (currNum > 0) { currNum = currNum - 1; }
-            gotoContentWheel('#' + arrContent.find(item => item.currNum === currNum).content);  
-        }
-    }
-
-    function onWheel(ev){
-        let e = e || window.event;
-        let delta = e.deltaY || e.detail || e.wheelDelta;
-
-        if (delta > 0) {
-            logicContentWheel(true);
-        } else {
-            logicContentWheel(false);
-        }
-        e.preventDefault ? e.preventDefault() : (e.returnValue = false);
-    }
-    
-    for (let i = 0; i < document.getElementsByClassName("mousewheel").length; i++) {
-        document.getElementsByClassName("mousewheel")[i].addEventListener("wheel", function (ev) {
-            onWheel(ev);
-        });
     }
 
     document.getElementById("sub").addEventListener('click', function (ev) {
@@ -434,21 +370,58 @@ document.addEventListener("DOMContentLoaded", function() {//Аналог $(docum
         };
     });
 
-    $(document).ready(function () {
-        $("#top-menu-nav, #toogle-div").on("click", "a", function(
-          event
-        ) {
-          //отменяем стандартную обработку нажатия по ссылке
-          event.preventDefault();
-
-          //забираем идентификатор бока с атрибута href
-          var id = $(this).attr("href"),
-            //узнаем высоту от начала страницы до блока на который ссылается якорь
-            top = $(id).offset().top - 135;
-
-          //анимируем переход на расстояние - top за 1500 мс
-          $("body,html").animate({ scrollTop: top }, 1500);
-        });
+    $("#top-menu-nav, #toogle-div").on("click", "a", function(event) {
+        event.preventDefault();//отменяем стандартную обработку нажатия по ссылке
+        var id = $(this).attr("href");//забираем идентификатор бока с атрибута href
+        changeCurrNum(id);
+        onClickGoTo(id);
     });
+
+    function changeCurrNum(id) {
+      currContent = id;
+      currNum = arrContent.find(item => item.content === id.slice(1, 5)).currNum;
+    }
+
+    function onClickGoTo(id) {
+        let top = $(id).offset().top - 137; //узнаем высоту от начала страницы до блока на который ссылается якорь
+        $("body,html").animate({ scrollTop: top }, delay);//анимируем переход на расстояние - top за 1500 мс
+    }
+
+    function jumpScreen(){
+        onScroll = true;
+        setTimeout(() => { onScroll = false; changeActiveMenu(); }, delay);
+        currContent = "#" + arrContent.find(item => item.currNum === currNum).content;
+        onClickGoTo(currContent);
+    }
+
+    function logicContentWheel(bool) {
+        if (bool) {
+            if (currNum < 5) { currNum = currNum + 1; }
+        } else {
+            if (currNum > 0) { currNum = currNum - 1; }
+        }
+        jumpScreen()
+    }
+
+    function onWheel(ev) {
+        let e = e || window.event;
+        let delta = e.deltaY || e.detail || e.wheelDelta;
+
+        if (!onScroll){
+            if (delta > 0) {
+                logicContentWheel(true);
+            } else {
+                logicContentWheel(false);
+            }
+        }
+
+        e.preventDefault ? e.preventDefault() : (e.returnValue = false);
+    }
+
+    for (let i = 0; i < document.getElementsByClassName("mousewheel").length; i++) {
+        document.getElementsByClassName("mousewheel")[i].addEventListener("wheel", function (ev) {
+            onWheel(ev);
+        });
+    }
 });
 
